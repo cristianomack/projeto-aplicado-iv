@@ -1,0 +1,22 @@
+# Ambiente virtual Python
+venv/
+env/
+.venv/
+
+# Cache e bytecode Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Variáveis de ambiente / segredos
+.env
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# Dados brutos pesados (ajustar conforme necessidade do projeto)
+# data/raw/*.csv
