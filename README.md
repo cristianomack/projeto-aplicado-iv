@@ -5,7 +5,7 @@ Projeto desenvolvido para a disciplina **Projeto Aplicado IV** — Ciência de D
 ## Equipe
 
 - Cristiano Prado do Carmo, 10720249
-- Bruna Mendes Rocha, matrícula
+- Bruna Mendes Rocha, 10441296
 
 
 ## Sobre o projeto
@@ -21,7 +21,7 @@ Este projeto propõe um modelo de previsão de séries temporais para estimar o 
 
 ## Fontes de dados
 
-- **ONS — Portal de Dados Abertos** (dados.ons.org.br): Energia Armazenada (EAR), Energia Natural Afluente (ENA), geração por fonte.
+- **ONS — Portal de Dados Abertos** (dados.ons.org.br): Energia Armazenada (EAR), Energia Natural Afluente (ENA), geração por fonte. Coletados de forma automatizada via bucket público na AWS (`ons-aws-prod-opendata`).
 - **ANEEL — Portal de Dados Abertos**: histórico de acionamento de bandeiras tarifárias.
 
 ## Estrutura do repositório
@@ -29,18 +29,42 @@ Este projeto propõe um modelo de previsão de séries temporais para estimar o 
 ```
 .
 ├── README.md
-├── notebooks/          # Notebook principal do projeto (cd_projeto_aplicado_IV_doc.ipynb)
-├── data/               # Dados brutos e processados
-└── docs/               # Documentação complementar, referências, apresentações
+├── requirements.txt
+├── notebooks/
+│   └── cd_projeto_aplicado_IV_doc.ipynb   # Notebook principal do projeto
+├── scripts/
+│   ├── explorar_bucket_ons.py             # Descoberta dos datasets no bucket do ONS
+│   ├── baixar_dados_ons.py                # Download automatizado de EAR e ENA
+│   └── listar_arquivos_ear_ena.py         # Listagem dos arquivos disponíveis
+├── data/
+│   └── raw/
+│       ├── ear_subsistema/                # EAR diário por subsistema (2000-2026)
+│       └── ena_subsistema/                # ENA diário por subsistema (2000-2026)
+└── docs/
+    └── img/                                # Figuras e diagramas usados no notebook
 ```
-
-> Estrutura de pastas provisória — ajustar conforme a organização real do grupo.
 
 ## Como executar
 
-Instruções detalhadas de ambiente e execução serão adicionadas conforme o projeto avança (ver seção de EDA/Modelos no notebook principal).
+1. Clone o repositório e crie um ambiente virtual Python:
+```bash
+   python -m venv venv
+```
+2. Ative o ambiente:
+   - Windows (PowerShell): `venv\Scripts\Activate.ps1`
+   - Mac/Linux: `source venv/bin/activate`
+3. Instale as dependências:
+```bash
+   pip install -r requirements.txt
+```
+4. (Opcional) Para atualizar os dados brutos, execute os scripts de coleta:
+```bash
+   python scripts/baixar_dados_ons.py
+```
+5. Abra `notebooks/cd_projeto_aplicado_IV_doc.ipynb` no Jupyter ou VS Code, selecione o kernel do `venv` e execute as células.
 
 ## Cronograma de entregas
+> Cronograma detalhado, semana a semana, disponível na seção "Cronograma" do notebook principal.
 
 | Entrega | Data | Conteúdo |
 |---|---|---|
