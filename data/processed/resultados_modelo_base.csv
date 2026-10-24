@@ -1,0 +1,11 @@
+,RMSE (p.p.),MAE (p.p.),Ganho de RMSE vs. ingênuo
+Random Forest (com ENA(t)),2.127,1.718,0.65
+Gradient Boosting (com ENA(t)),2.206,1.861,0.637
+Gradient Boosting (sem ENA(t)),2.829,1.938,0.534
+"SARIMAX com ENA(t) (2,1,1)(0,0,0,12)",2.856,2.169,0.53
+Random Forest (sem ENA(t)),2.96,2.084,0.513
+Persistência + variação sazonal média,3.166,2.205,0.479
+"SARIMA (2,1,1)(0,0,0,12)",3.545,2.751,0.416
+"SARIMAX com ENA(t-1) (2,1,1)(0,0,0,12)",3.555,2.731,0.415
+Ingênuo (mês anterior),6.073,4.694,0.0
+Ingênuo sazonal (12 meses),19.48,15.849,-2.207
