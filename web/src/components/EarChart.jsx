@@ -5,17 +5,18 @@ import { RISCO } from "./ui";
  * Série da EAR: histórico observado, previsão com faixa de 80% e, na versão completa,
  * limites de risco do mês-alvo. SVG puro, sem biblioteca de gráficos.
  */
-export default function EarChart({ historico, previsao, compacto = false }) {
-  const W = compacto ? 320 : 780;
-  const H = compacto ? 96 : 320;
-  const m = compacto ? { l: 6, r: 6, t: 16, b: 20 } : { l: 48, r: 20, t: 18, b: 36 };
+export default function EarChart({ historico, previsao, compacto = false, medio = false, normal = null, limites = true }) {
+  const W = compacto ? 320 : medio ? 380 : 780;
+  const H = compacto ? 96 : medio ? 250 : 320;
+  const m = compacto ? { l: 6, r: 6, t: 16, b: 20 } : medio ? { l: 34, r: 12, t: 18, b: 30 } : { l: 48, r: 20, t: 18, b: 36 };
   const nH = historico.length;
   const nF = previsao.length;
   const total = nH + nF;
 
   const valores = [
+    ...(normal ? [...historico, ...previsao].flatMap((d) => normal(d.mes)) : []),
     ...historico.map((d) => d.ear),
-    ...previsao.flatMap((d) => [d.inf, d.sup, ...(compacto ? [] : [d.limite_alto, d.limite_atencao])]),
+    ...previsao.flatMap((d) => [d.inf, d.sup, ...(compacto || !limites ? [] : [d.limite_alto, d.limite_atencao])]),
   ];
   const piso = Math.max(0, Math.floor((Math.min(...valores) - 4) / 10) * 10);
   const teto = Math.min(100, Math.ceil((Math.max(...valores) + 4) / 10) * 10);
@@ -32,21 +33,32 @@ export default function EarChart({ historico, previsao, compacto = false }) {
   const inf = [origem, ...previsao.map((d, i) => [x(nH + i), y(d.inf)])].reverse();
   const faixa = `${linha(sup)} ${linha(inf).replace("M", "L")} Z`;
 
+  let faixaNormal = null;
+  if (normal) {
+    const meses = Array.from({ length: total }, (_, i) => (i < nH ? historico[i].mes : previsao[i - nH].mes));
+    const lo = meses.map((mm, i) => [x(i), y(normal(mm)[0])]);
+    const hi = meses.map((mm, i) => [x(i), y(normal(mm)[1])]).reverse();
+    faixaNormal = `${linha(lo)} ${linha(hi).replace("M", "L")} Z`;
+  }
+
   const lim = (chave) => linha(previsao.map((d, i) => [x(nH + i), y(d[chave])]));
 
   const mes = (i) => (i < nH ? historico[i].mes : previsao[i - nH].mes);
   const rotulosX = [];
   if (compacto) {
     for (let i = 0; i < total; i += Math.ceil(total / 3)) rotulosX.push(i);
-  } else if (total > 60) {
-    // série longa: um rótulo por ano múltiplo de 5, em janeiro
+  } else if (total > 150) {
+    // série muito longa: um rótulo por ano múltiplo de 5, em janeiro
     for (let i = 0; i < total; i++) if (mes(i).endsWith("-01") && Number(mes(i).slice(0, 4)) % 5 === 0) rotulosX.push(i);
+  } else if (total > 40) {
+    // alguns anos: um rótulo em cada janeiro
+    for (let i = 0; i < total; i++) if (mes(i).endsWith("-01")) rotulosX.push(i);
   } else {
-    const passo = total > 36 ? 6 : 4;
+    const passo = total > 28 ? 6 : 4;
     for (let i = 0; i < total; i += passo) rotulosX.push(i);
     if (!rotulosX.includes(total - 1) && total - 1 - rotulosX[rotulosX.length - 1] > 2) rotulosX.push(total - 1);
   }
-  const rotuloX = (i) => (total > 60 && !compacto ? mes(i).slice(0, 4) : mesCurto(mes(i)));
+  const rotuloX = (i) => (total > 150 && !compacto ? mes(i).slice(0, 4) : mesCurto(mes(i)));
   const grade = [];
   for (let v = piso; v <= teto; v += 10) grade.push(v);
 
@@ -58,15 +70,16 @@ export default function EarChart({ historico, previsao, compacto = false }) {
         grade.map((v) => (
           <g key={v}>
             <line x1={m.l} x2={W - m.r} y1={y(v)} y2={y(v)} stroke="#E1E9ED" />
-            <text x={m.l - 8} y={y(v) + 4} textAnchor="end" className="eixo">
+            <text x={m.l - 6} y={y(v) + 4} textAnchor="end" className="eixo">
               {v}
             </text>
           </g>
         ))}
 
       <line x1={origem[0]} x2={origem[0]} y1={m.t} y2={H - m.b} stroke="#9FB3BD" strokeDasharray="2 3" />
+      {faixaNormal && <path d={faixaNormal} fill="#DDE6EA" fillOpacity="0.8" />}
       <path d={faixa} fill="#BFDCE8" fillOpacity="0.75" />
-      {!compacto && (
+      {!compacto && limites && (
         <>
           <path d={lim("limite_atencao")} fill="none" stroke="#B3761E" strokeWidth="1.5" strokeDasharray="5 4" />
           <path d={lim("limite_alto")} fill="none" stroke="#B3261E" strokeWidth="1.5" strokeDasharray="5 4" />
@@ -82,7 +95,7 @@ export default function EarChart({ historico, previsao, compacto = false }) {
         ))}
 
       {rotulosX.map((i) => (
-        <text key={i} x={x(i)} y={H - (compacto ? 4 : 12)} textAnchor={i === 0 && total <= 60 ? "start" : i === total - 1 ? "end" : "middle"}
+        <text key={i} x={x(i)} y={H - (compacto ? 4 : medio ? 8 : 12)} textAnchor={i === 0 && total <= 40 ? "start" : i >= total - 2 ? "end" : "middle"}
           className="eixo">
           {rotuloX(i)}
         </text>

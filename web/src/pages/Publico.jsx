@@ -1,17 +1,27 @@
+import { useMemo, useState } from "react";
+import Calculadora from "../components/Calculadora";
 import EarChart from "../components/EarChart";
-import { BandeiraPill, RiscoChip, Semaforo } from "../components/ui";
-import { mesLongo, pct, soMes } from "../format";
+import Faq from "../components/Faq";
+import LinhaDoTempo from "../components/LinhaDoTempo";
+import PrevisaoMeses from "../components/PrevisaoMeses";
+import Segmentado from "../components/Segmentado";
+import Termometro from "../components/Termometro";
+import { BandeiraPill, RISCO, Semaforo } from "../components/ui";
+import { mesLongo, pct } from "../format";
+import { faixaHabitual } from "../stats";
 
-const FRASE = {
-  Baixo: "Tranquila",
-  "Atenção": "Atenção",
-  Alto: "Risco alto",
-};
+const FRASE = { Baixo: "Tranquila", "Atenção": "Atenção", Alto: "Risco alto" };
+const PERIODOS = [
+  { valor: 12, texto: "12 meses" },
+  { valor: 60, texto: "5 anos" },
+];
 
 export default function Publico({ painel }) {
-  const { situacao, previsao, historico, bandeira } = painel;
+  const { situacao, previsao, bandeira, avaliacao_teste: aval } = painel;
+  const serie = painel.serie_ear ?? painel.historico;
+  const [periodo, setPeriodo] = useState(12);
+  const normal = useMemo(() => (painel.serie_ear ? faixaHabitual(painel.serie_ear) : null), [painel]);
   const baixaConfianca = previsao.filter((p) => p.confianca === "baixa").map((p) => p.horizonte);
-  const abaixoDe = Math.round(situacao.percentil_do_mes);
 
   return (
     <main className="pagina-publico">
@@ -30,39 +40,64 @@ export default function Publico({ painel }) {
             <p>Os reservatórios estão com {pct(situacao.ear, 0)} da capacidade ({mesLongo(situacao.mes)}).</p>
           </div>
         </div>
-        <p className="apoio">
-          Nesta época do ano, o nível já foi mais baixo em {abaixoDe}% dos anos desde 2000.
-        </p>
-        <EarChart historico={historico} previsao={previsao} compacto />
-        <p className="legenda">Últimos 24 meses e previsão para os próximos 6.</p>
+        {painel.serie_ear && (
+          <>
+            <h3 className="sub">Como está comparado ao normal</h3>
+            <Termometro serie={painel.serie_ear} situacao={situacao} />
+          </>
+        )}
       </section>
 
-      <section className="cartao linha-flex" aria-labelledby="p-band">
-        <div>
-          <h2 id="p-band" className="rotulo-h">Bandeira tarifária vigente ({mesLongo(bandeira.vigente.mes)})</h2>
-          <p className="apoio">Informação oficial da ANEEL. Estimativa estatística de mudança não substitui a decisão oficial.</p>
-        </div>
-        <BandeiraPill bandeira={bandeira.vigente.bandeira} grande />
+      <section className="cartao" aria-labelledby="p-evo">
+        <h2 id="p-evo" className="rotulo-h">Evolução e previsão dos próximos 6 meses</h2>
+        <Segmentado rotulo="Período" opcoes={PERIODOS} valor={periodo} onChange={setPeriodo} />
+        <EarChart medio historico={serie.slice(-periodo)} previsao={previsao} normal={normal} limites={false} />
+        <ul className="legenda-linha">
+          <li><i className="tr" style={{ background: "#10222E" }} />Observada</li>
+          <li><i className="tr" style={{ background: "#0F6E8C" }} />Previsão</li>
+          <li><i className="tr faixa" />Faixa provável</li>
+          {normal && <li><i className="tr faixa" style={{ background: "#DDE6EA" }} />Faixa habitual do mês</li>}
+        </ul>
+        <p className="apoio">
+          A faixa habitual mostra onde o nível costuma ficar em cada mês (metade central dos anos, de 2000 até hoje). A
+          faixa provável é o intervalo de 80% da previsão.
+        </p>
       </section>
 
       <section className="cartao" aria-labelledby="p-prox">
-        <h2 id="p-prox" className="rotulo-h">Risco nos próximos meses</h2>
-        <ul className="meses">
-          {previsao.map((p) => (
-            <li key={p.mes}>
-              <span className="mes">{soMes(p.mes)}</span>
-              <RiscoChip risco={p.risco} curto />
-              {p.incerto && <span className="incerto">incerto</span>}
-            </li>
-          ))}
-        </ul>
+        <h2 id="p-prox" className="rotulo-h">Previsão mês a mês</h2>
+        <PrevisaoMeses previsao={previsao} cobertura={aval.cobertura_intervalo} />
         {baixaConfianca.length > 0 && (
           <p className="apoio">
-            Previsões de {baixaConfianca.join(" e ")} meses à frente têm baixa confiança: serviram nos testes apenas
-            como indicação de tendência.
+            Previsões de {baixaConfianca.join(" e ")} meses à frente têm baixa confiança: nos testes, servem como indicação
+            de tendência.
           </p>
         )}
       </section>
+
+      <section className="cartao" aria-labelledby="p-band">
+        <div className="linha-flex">
+          <div>
+            <h2 id="p-band" className="rotulo-h">Bandeira tarifária vigente ({mesLongo(bandeira.vigente.mes)})</h2>
+            <p className="apoio">Informação oficial da ANEEL.</p>
+          </div>
+          <BandeiraPill bandeira={bandeira.vigente.bandeira} grande />
+        </div>
+        {bandeira.linha_do_tempo && (
+          <>
+            <h3 className="sub">Últimos 24 meses</h3>
+            <LinhaDoTempo linha={bandeira.linha_do_tempo} />
+          </>
+        )}
+        <p className="apoio">Estimativa estatística de mudança não substitui a decisão oficial da ANEEL.</p>
+      </section>
+
+      {bandeira.valores && (
+        <section className="cartao" aria-labelledby="p-calc">
+          <h2 id="p-calc" className="rotulo-h">Quanto a bandeira adiciona na minha conta?</h2>
+          <Calculadora valores={bandeira.valores} vigente={bandeira.vigente} />
+        </section>
+      )}
 
       <section className="cartao destaque" aria-labelledby="p-ent">
         <h2 id="p-ent">O que isso significa para a minha conta?</h2>
@@ -71,6 +106,16 @@ export default function Publico({ painel }) {
           pode levar a uma bandeira tarifária mais alta. Mas a bandeira também depende de outros fatores, como a
           demanda e a geração eólica e solar, e o nível dos reservatórios sozinho não determina a bandeira.
         </p>
+        <p className="como-ler">
+          <strong>Como ler o risco:</strong> <span style={{ color: RISCO.Alto.fg }}>alto</span> quer dizer que o nível
+          está entre os 20% mais baixos do histórico daquele mês; <span style={{ color: RISCO["Atenção"].fg }}>atenção</span>,
+          entre os 40% mais baixos; e <span style={{ color: RISCO.Baixo.fg }}>baixo</span>, acima disso.
+        </p>
+      </section>
+
+      <section className="cartao" aria-labelledby="p-faq">
+        <h2 id="p-faq" className="rotulo-h">Perguntas frequentes</h2>
+        <Faq painel={painel} />
       </section>
 
       <footer className="rodape">
