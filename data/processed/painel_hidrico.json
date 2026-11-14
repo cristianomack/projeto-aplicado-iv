@@ -861,6 +861,178 @@
     "mudou": true,
     "acertou": false
    }
+  ],
+  "valores": [
+   {
+    "nome": "Verde",
+    "grupo": "Verde",
+    "valor_r_mwh": 0.0,
+    "ultimo_mes": "2026-11"
+   },
+   {
+    "nome": "Amarela",
+    "grupo": "Amarela",
+    "valor_r_mwh": 18.85,
+    "ultimo_mes": "2026-09"
+   },
+   {
+    "nome": "Vermelha P1",
+    "grupo": "Vermelha",
+    "valor_r_mwh": 44.63,
+    "ultimo_mes": "2025-11"
+   },
+   {
+    "nome": "Vermelha P2",
+    "grupo": "Vermelha",
+    "valor_r_mwh": 78.77,
+    "ultimo_mes": "2025-09"
+   }
+  ],
+  "linha_do_tempo": [
+   {
+    "mes": "2024-12",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2025-01",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2025-02",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2025-03",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2025-04",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2025-05",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2025-06",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P1",
+    "valor_r_mwh": 44.63
+   },
+   {
+    "mes": "2025-07",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P1",
+    "valor_r_mwh": 44.63
+   },
+   {
+    "mes": "2025-08",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P2",
+    "valor_r_mwh": 78.77
+   },
+   {
+    "mes": "2025-09",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P2",
+    "valor_r_mwh": 78.77
+   },
+   {
+    "mes": "2025-10",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P1",
+    "valor_r_mwh": 44.63
+   },
+   {
+    "mes": "2025-11",
+    "bandeira": "Vermelha",
+    "nome_aneel": "Vermelha P1",
+    "valor_r_mwh": 44.63
+   },
+   {
+    "mes": "2025-12",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-01",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2026-02",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2026-03",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2026-04",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2026-05",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-06",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-07",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-08",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-09",
+    "bandeira": "Amarela",
+    "nome_aneel": "Amarela",
+    "valor_r_mwh": 18.85
+   },
+   {
+    "mes": "2026-10",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   },
+   {
+    "mes": "2026-11",
+    "bandeira": "Verde",
+    "nome_aneel": "Verde",
+    "valor_r_mwh": 0.0
+   }
   ]
  },
  "versao_esquema": 2,
@@ -6021,5 +6193,6 @@
     ]
    }
   ]
- }
+ },
+ "fonte_aneel_gerado_em": "2026-11-10"
 }
