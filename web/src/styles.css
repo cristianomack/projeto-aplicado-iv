@@ -1,0 +1,111 @@
+:root {
+  --fundo: #eef3f5;
+  --cartao: #ffffff;
+  --borda: #d2dee3;
+  --texto: #10222e;
+  --texto-2: #3f5766;
+  --marca: #0b3a4f;
+  --acento: #0f6e8c;
+  --link: #0b5c77;
+  --info-bg: #e0edf2;
+  --info-borda: #bcd3dd;
+  --info-texto: #17384a;
+  font-family: "IBM Plex Sans", system-ui, sans-serif;
+  color: var(--texto);
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--fundo); }
+a { color: var(--link); }
+a:hover { color: #08425a; }
+h1, h2, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+
+.nav { display: flex; background: var(--cartao); border-bottom: 1px solid var(--borda); position: sticky; top: 0; z-index: 2; }
+.nav a { flex: 1; min-height: 48px; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 14px; font-weight: 500; color: var(--texto-2); border-bottom: 3px solid transparent; }
+.nav a[aria-current="page"] { color: var(--link); font-weight: 600; border-bottom-color: var(--acento); }
+@media (min-width: 900px) { .nav { justify-content: center; } .nav a { flex: 0 0 220px; } }
+
+.carregando, .aviso { padding: 24px 20px; text-align: center; color: var(--texto-2); }
+.aviso { color: #7a1410; }
+
+.sobretitulo { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; color: #bfdce8; margin-bottom: 4px; }
+.sobretitulo.escuro { color: var(--texto-2); }
+.regiao { margin-top: 12px; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border-radius: 8px; background: #fff; color: var(--texto); font-size: 15px; font-weight: 500; }
+.regiao.escuro { background: none; padding: 0; min-height: 0; margin-top: 6px; color: var(--texto-2); font-size: 14px; font-weight: 400; }
+
+.cartao { padding: 16px; background: var(--cartao); border: 1px solid var(--borda); border-radius: 14px; }
+.cartao h2 { font-size: 18px; font-weight: 600; }
+.rotulo { font-size: 13px; color: var(--texto-2); font-weight: 500; }
+.rotulo-h { font-size: 14px; color: var(--texto-2); font-weight: 500; margin-bottom: 4px; }
+.apoio { font-size: 13px; line-height: 1.5; color: var(--texto-2); margin-top: 6px; }
+.legenda { font-size: 12px; color: var(--texto-2); margin-top: 2px; }
+.mono { font-family: "IBM Plex Mono", monospace; }
+
+.chip { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.pill { display: inline-block; padding: 3px 12px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.pill-grande { padding: 8px 16px; font-size: 17px; }
+.incerto { font-size: 12px; color: #7a4f0a; font-weight: 600; }
+
+.grafico { width: 100%; height: auto; display: block; margin-top: 10px; }
+.eixo { font: 11px "IBM Plex Mono", monospace; fill: var(--texto-2); }
+.eixo-sans { font: 11px "IBM Plex Sans", sans-serif; fill: var(--texto-2); }
+
+/* Painel público */
+.pagina-publico { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding-bottom: 32px; }
+.pagina-publico .topo { background: var(--marca); color: #fff; padding: 20px 20px 16px; }
+.pagina-publico .topo h1 { font-size: 22px; line-height: 1.25; font-weight: 700; }
+.pagina-publico > .cartao, .pagina-publico > .rodape { margin: 0 16px; }
+.situacao { display: flex; align-items: center; gap: 16px; }
+.situacao h2 { font-size: 28px; line-height: 1.1; font-weight: 700; margin: 2px 0 4px; }
+.situacao p:last-child { font-size: 14px; line-height: 1.45; color: #2a4352; }
+.semaforo { display: flex; flex-direction: column; gap: 6px; padding: 8px; border-radius: 999px; background: var(--texto); flex: none; }
+.semaforo span { width: 26px; height: 26px; border-radius: 50%; }
+.linha-flex { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.meses { display: grid; grid-template-columns: repeat(6, 1fr); gap: 6px; margin-top: 8px; }
+.meses li { display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center; }
+.meses .mes { font-size: 12px; color: var(--texto-2); }
+.meses .chip { font-size: 12px; padding: 6px 2px; border-radius: 8px; width: 100%; }
+.meses .incerto { font-size: 11px; }
+.destaque { background: var(--info-bg); border-color: var(--info-borda); color: var(--info-texto); }
+.destaque h2 { font-size: 15px; margin-bottom: 4px; }
+.destaque p { font-size: 13px; line-height: 1.5; }
+.rodape { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 16px; font-size: 13px; color: var(--texto-2); }
+
+/* Painel técnico */
+.pagina-tecnico { max-width: 1180px; margin: 0 auto; padding: 24px 20px 48px; display: flex; flex-direction: column; gap: 20px; }
+.pagina-tecnico h1 { font-size: 28px; line-height: 1.2; font-weight: 700; }
+.kpis { display: flex; flex-wrap: wrap; gap: 16px; }
+.kpi { flex: 1 1 220px; padding: 16px 20px; background: var(--cartao); border: 1px solid var(--borda); border-radius: 12px; }
+.kpi .valor { font: 600 34px/1.1 "IBM Plex Mono", monospace; margin: 6px 0 2px; }
+.kpi .valor-pill { margin: 10px 0 8px; }
+.kpis-menor { margin: 12px 0; }
+.legenda-linha { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 13px; color: var(--texto-2); margin-top: 8px; }
+.legenda-linha li { display: flex; align-items: center; gap: 6px; }
+.tr { display: inline-block; width: 20px; height: 3px; }
+.tr.faixa { height: 10px; background: #bfdce8; }
+.tr.trac { height: 0; border-top: 2px dashed; }
+.rolagem { overflow-x: auto; margin-top: 10px; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th { text-align: left; font-weight: 600; padding: 8px 10px 8px 0; border-bottom: 2px solid var(--texto); white-space: nowrap; }
+td { padding: 9px 10px 9px 0; border-bottom: 1px solid #e1e9ed; white-space: nowrap; }
+th.d, td.d { text-align: right; }
+.so-leitor { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.limites { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; padding-left: 18px; list-style: disc; font-size: 14px; line-height: 1.5; color: #2a4352; }
+.pagina-tecnico .rodape { padding-top: 4px; }
+
+a:focus-visible, button:focus-visible { outline: 3px solid var(--acento); outline-offset: 2px; }
+
+/* Filtros e controles */
+.controles { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 12px 24px; margin: 10px 0 4px; }
+.controle { display: flex; flex-direction: column; gap: 4px; }
+.controle-rotulo { font-size: 13px; color: var(--texto-2); font-weight: 500; }
+.segmentado { display: flex; flex-wrap: wrap; gap: 6px; }
+.segmentado button, .seletor button, .seletor select { min-height: 44px; border-radius: 8px; border: 1px solid #b8c8d0; background: #fff; color: var(--link); font: 500 14px "IBM Plex Sans", sans-serif; padding: 0 14px; cursor: pointer; }
+.segmentado button[aria-pressed="true"] { background: var(--acento); border-color: var(--acento); color: #fff; font-weight: 600; }
+.seletor { display: flex; gap: 6px; }
+.seletor select { color: var(--texto); min-width: 140px; }
+.seletor button:disabled { opacity: .4; cursor: default; }
+.marcador { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: 14px; color: var(--texto); }
+.marcador input { width: 20px; height: 20px; accent-color: var(--acento); }
+.rolagem-vertical { max-height: 440px; overflow-y: auto; }
+.rolagem-vertical thead th { position: sticky; top: 0; background: var(--cartao); }
