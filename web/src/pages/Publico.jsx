@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react";
 import Calculadora from "../components/Calculadora";
+import Downloads from "../components/Downloads";
 import EarChart from "../components/EarChart";
 import Faq from "../components/Faq";
 import LinhaDoTempo from "../components/LinhaDoTempo";
@@ -7,6 +8,7 @@ import PrevisaoMeses from "../components/PrevisaoMeses";
 import Segmentado from "../components/Segmentado";
 import Termometro from "../components/Termometro";
 import { BandeiraPill, RISCO, Semaforo } from "../components/ui";
+import { dataBr } from "../download";
 import { mesLongo, pct } from "../format";
 import { faixaHabitual } from "../stats";
 
@@ -33,6 +35,10 @@ export default function Publico({ painel }) {
           <p className="sobretitulo">Do reservatório à conta de luz</p>
           <h1>Como estão os reservatórios da sua região</h1>
           <p className="regiao">{painel.regiao}</p>
+          <p className="atualizacao">
+            Dados até {mesLongo(painel.origem)}
+            {painel.fonte_aneel_gerado_em && <> · bandeiras da ANEEL consultadas em {dataBr(painel.fonte_aneel_gerado_em)}</>}
+          </p>
         </div>
       </header>
 
@@ -128,11 +134,16 @@ export default function Publico({ painel }) {
         <Faq painel={painel} />
       </section>
 
+      <section className="cartao" aria-labelledby="p-baixar">
+        <h2 id="p-baixar" className="rotulo-h">Baixar os dados</h2>
+        <Downloads painel={painel} />
+      </section>
+
       </div>
       </div>
 
       <footer className="rodape miolo">
-        <a href="#/tecnico">Ver detalhes técnicos</a>
+        <span><a href="#/tecnico">Detalhes técnicos</a> · <a href="#/sobre">Sobre e metodologia</a></span>
         <span>Fontes: ONS e ANEEL, dados abertos.</span>
       </footer>
     </main>
