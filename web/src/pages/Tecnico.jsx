@@ -11,6 +11,7 @@ const CONF = { boa: "boa", moderada: "moderada", baixa: "baixa" };
 const PERIODOS = [
   { valor: 24, texto: "2 anos" },
   { valor: 60, texto: "5 anos" },
+  { valor: 120, texto: "10 anos" },
   { valor: 0, texto: "Desde 2000" },
 ];
 const HORIZONTES = [

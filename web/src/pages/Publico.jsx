@@ -13,7 +13,10 @@ import { faixaHabitual } from "../stats";
 const FRASE = { Baixo: "Tranquila", "Atenção": "Atenção", Alto: "Risco alto" };
 const PERIODOS = [
   { valor: 12, texto: "12 meses" },
+  { valor: 36, texto: "3 anos" },
   { valor: 60, texto: "5 anos" },
+  { valor: 120, texto: "10 anos" },
+  { valor: 0, texto: "Desde 2000" },
 ];
 
 export default function Publico({ painel }) {
@@ -56,7 +59,7 @@ export default function Publico({ painel }) {
       <section className="cartao" aria-labelledby="p-evo">
         <h2 id="p-evo" className="rotulo-h">Evolução e previsão dos próximos 6 meses</h2>
         <Segmentado rotulo="Período" opcoes={PERIODOS} valor={periodo} onChange={setPeriodo} />
-        <EarChart historico={serie.slice(-periodo)} previsao={previsao} normal={normal} limites={false} />
+        <EarChart historico={periodo === 0 ? serie : serie.slice(-periodo)} previsao={previsao} normal={normal} limites={false} />
         <ul className="legenda-linha">
           <li><i className="tr" style={{ background: "#10222E" }} />Observada</li>
           <li><i className="tr" style={{ background: "#0F6E8C" }} />Previsão</li>

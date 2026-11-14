@@ -30,11 +30,11 @@ export function BandeiraPill({ bandeira, grande = false }) {
 
 export function Semaforo({ risco }) {
   const ativo = { Baixo: 0, "Atenção": 1, Alto: 2 }[risco];
-  const cores = ["#1E7B4B", "#F6C945", "#B3261E"];
+  const cores = ["#16A34A", "#FACC15", "#DC2626"];
   return (
     <div className="semaforo" aria-hidden="true">
       {cores.map((c, i) => (
-        <span key={c} style={{ background: c, opacity: i === ativo ? 1 : 0.25 }} />
+        <span key={c} className={i === ativo ? "acesa" : ""} style={{ background: c, opacity: i === ativo ? 1 : 0.16, boxShadow: i === ativo ? `0 0 0 2px #fff, 0 0 16px 3px ${c}` : "none" }} />
       ))}
     </div>
   );

@@ -1,4 +1,5 @@
-import { mesCurto, pct } from "../format";
+import { useState } from "react";
+import { mesCurto, mesLongo, pct } from "../format";
 import useLargura, { dimensoes } from "./useLargura";
 import { RISCO } from "./ui";
 
@@ -8,6 +9,7 @@ import { RISCO } from "./ui";
  */
 export default function EarChart({ historico, previsao, compacto = false, normal = null, limites = true }) {
   const [caixa, largura] = useLargura();
+  const [sel, setSel] = useState(null);
   const d = dimensoes(largura);
   const W = compacto ? 320 : d.W;
   const H = compacto ? 96 : d.H;
@@ -50,26 +52,50 @@ export default function EarChart({ historico, previsao, compacto = false, normal
   const rotulosX = [];
   if (compacto) {
     for (let i = 0; i < total; i += Math.ceil(total / 3)) rotulosX.push(i);
-  } else if (total > 150) {
-    // série muito longa: um rótulo por ano múltiplo de 5, em janeiro
-    for (let i = 0; i < total; i++) if (mes(i).endsWith("-01") && Number(mes(i).slice(0, 4)) % 5 === 0) rotulosX.push(i);
   } else if (total > 40) {
-    // alguns anos: um rótulo em cada janeiro
-    for (let i = 0; i < total; i++) if (mes(i).endsWith("-01")) rotulosX.push(i);
+    // vários anos: um rótulo por ano (janeiro), espaçados para não se sobreporem
+    const maxRot = Math.max(3, Math.floor((W - m.l - m.r) / 54));
+    const anos = total / 12;
+    const passoAnos = [1, 2, 5, 10].find((p) => anos / p <= maxRot) ?? 10;
+    for (let i = 0; i < total; i++) if (mes(i).endsWith("-01") && Number(mes(i).slice(0, 4)) % passoAnos === 0) rotulosX.push(i);
   } else {
     const passo = total > 28 ? 6 : 4;
     for (let i = 0; i < total; i += passo) rotulosX.push(i);
     if (!rotulosX.includes(total - 1) && total - 1 - rotulosX[rotulosX.length - 1] > 2) rotulosX.push(total - 1);
   }
-  const rotuloX = (i) => (total > 150 && !compacto ? mes(i).slice(0, 4) : mesCurto(mes(i)));
+  const rotuloX = (i) => (total > 40 && !compacto ? mes(i).slice(0, 4) : mesCurto(mes(i)));
   const grade = [];
   for (let v = piso; v <= teto; v += 10) grade.push(v);
+
+  const aoMover = (e) => {
+    if (compacto) return;
+    const r = e.currentTarget.getBoundingClientRect();
+    const px = ((e.clientX - r.left) / r.width) * W;
+    const i = Math.round(((px - m.l) / (W - m.l - m.r)) * (total - 1));
+    setSel(Math.max(0, Math.min(total - 1, i)));
+  };
+  const ponto = sel === null ? null : sel < nH ? historico[sel] : previsao[sel - nH];
+  const ehPrev = sel !== null && sel >= nH;
+  const faixaN = ponto && normal ? normal(ponto.mes) : null;
+  const xs = sel === null ? 0 : x(sel);
+  const dica = ponto && (
+    <div className="dica" style={{ left: xs, top: m.t, transform: xs > W * 0.55 ? "translateX(calc(-100% - 12px))" : "translateX(12px)" }}>
+      <strong>{mesLongo(ponto.mes)}</strong>
+      <span className="dica-valor">
+        {ehPrev ? "Previsão" : "Observada"}: <b>{pct(ponto.ear)}</b>
+      </span>
+      {ehPrev && <span>Faixa provável: {pct(ponto.inf, 0)} a {pct(ponto.sup, 0)}</span>}
+      {faixaN && <span>Faixa habitual: {pct(faixaN[0], 0)} a {pct(faixaN[1], 0)}</span>}
+      {ehPrev && <span>Risco: {RISCO[ponto.risco].curto}{ponto.confianca === "baixa" ? " (baixa confiança)" : ""}</span>}
+    </div>
+  );
 
   const resumo = `Energia armazenada: ${pct(ultimo.ear)} em ${mesCurto(ultimo.mes)}; previsão de ${pct(previsao[0].ear)} em ${mesCurto(previsao[0].mes)} e ${pct(previsao[nF - 1].ear)} em ${mesCurto(previsao[nF - 1].mes)}.`;
 
   return (
     <div ref={caixa} className="grafico-caixa">
-    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={resumo} className="grafico">
+    <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={resumo} className={compacto ? "grafico" : "grafico interativo"}
+      onPointerMove={aoMover} onPointerDown={aoMover} onPointerLeave={() => setSel(null)}>
       {!compacto &&
         grade.map((v) => (
           <g key={v}>
@@ -107,7 +133,14 @@ export default function EarChart({ historico, previsao, compacto = false, normal
       <text x={origem[0]} y={m.t - 4} textAnchor="middle" className="eixo-sans">
         hoje
       </text>
+      {ponto && (
+        <g pointerEvents="none">
+          <line x1={xs} x2={xs} y1={m.t} y2={H - m.b} stroke="#10222E" strokeWidth="1" />
+          <circle cx={xs} cy={y(ponto.ear)} r="5.5" fill="#FFFFFF" stroke={ehPrev ? "#0F6E8C" : "#10222E"} strokeWidth="3" />
+        </g>
+      )}
     </svg>
+    {dica}
     </div>
   );
 }
