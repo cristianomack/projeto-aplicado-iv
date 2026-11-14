@@ -2,54 +2,46 @@
 
 Projeto desenvolvido para a disciplina **Projeto Aplicado IV**, Ciência de Dados EaD, Universidade Presbiteriana Mackenzie (2026/02).
 
+**Painel público:** https://cristianomack.github.io/projeto-aplicado-iv/
+(página técnica em `#/tecnico` e metodologia em `#/sobre`)
+
 ## Equipe
 
 - Cristiano Prado do Carmo, 10720249
 - Bruna Mendes Rocha, 10441296
 
-
 ## Sobre o projeto
 
 O Brasil possui uma matriz elétrica predominantemente hidrelétrica, o que cria uma relação direta entre a disponibilidade de água nos reservatórios e a segurança do fornecimento de energia. Ao mesmo tempo, o crescimento acelerado da geração solar e eólica tem introduzido novos desafios operacionais ao sistema, como o fenômeno do *curtailment* (corte de geração por excesso de oferta).
 
-Este projeto propõe um modelo de previsão de séries temporais para estimar o nível futuro de Energia Armazenada (EAR) nos reservatórios do Sistema Interligado Nacional (SIN), utilizando a Energia Natural Afluente (ENA) e a geração solar/eólica como variáveis explicativas. A partir dessa previsão, são derivadas camadas de classificação de risco energético-hídrico e uma estimativa de bandeira tarifária, com o objetivo de gerar tanto informação técnica quanto informação acessível à população.
+Este projeto prevê, de 1 a 6 meses à frente, a Energia Armazenada (EAR) nos reservatórios do subsistema Sudeste/Centro-Oeste, usando a Energia Natural Afluente (ENA) como variável explicativa. A previsão alimenta uma **camada de decisão** que traduz o nível previsto em risco hídrico (alto, atenção ou baixo) em relação ao histórico do mesmo mês do ano, com indicação de incerteza e de confiança. O resultado é publicado em um **painel web** com uma visão pública, em linguagem simples, e uma visão técnica, com backtest e limitações.
 
+A bandeira tarifária vigente vem da ANEEL. O projeto também avalia, de forma honesta, se é possível antecipar mudanças de bandeira.
 
-## Status do projeto
+## Principais resultados
 
-**Etapa 3 (implementação parcial) concluída.** O notebook contém a análise exploratória e o pré-processamento das séries de EAR e ENA do subsistema Sudeste/Centro-Oeste (2000 a 2026, passo mensal) e um modelo base com duas famílias de técnicas, comparadas a três baselines na previsão da EAR um mês à frente.
+Avaliação em janela expansiva (walk-forward) no período de teste, de 01/2022 a 10/2026 (58 meses). Treino até 2018 e validação de 2019 a 2021.
 
-![Pipeline da solução](docs/img/pipeline_solucao_projeto.svg)
-
-Desempenho no conjunto de teste (01/2022 a 08/2026, 56 meses), em pontos percentuais de EAR, medido pela raiz do erro quadrático médio (RMSE) e pelo erro absoluto médio (MAE):
-
-| Modelo | RMSE | MAE |
-|---|---|---|
-| Random Forest (com ENA do mês alvo) | 2,13 | 1,72 |
-| Gradient Boosting (com ENA do mês alvo) | 2,21 | 1,86 |
-| SARIMAX (com ENA do mês alvo) | 2,86 | 2,17 |
-| Gradient Boosting (sem ENA do mês alvo) | 2,83 | 1,94 |
-| Random Forest (sem ENA do mês alvo) | 2,96 | 2,08 |
-| SARIMA | 3,55 | 2,75 |
-| Baseline: persistência + variação sazonal média | 3,17 | 2,21 |
-| Baseline: ingênuo (mês anterior) | 6,07 | 4,69 |
-
-As variantes "com ENA do mês alvo" são cenários condicionais, pois assumem a afluência do mês previsto como conhecida. Sem essa informação, os ganhos sobre o baseline sazonal são modestos e não significativos estatisticamente, o que orienta o refinamento da Etapa 4.
-
-![Previsões no conjunto de teste](docs/img/modelo_base_previsoes_teste.png)
-
-**Próximos passos (Etapa 4):** integrar bandeiras tarifárias da ANEEL e geração solar e eólica, prever a ENA ou usar cenários, estender os horizontes de previsão de 1 a 6 meses, implementar a camada de decisão (risco e bandeira) e o painel técnico e público.
-
+- **O melhor modelo depende do horizonte.** O Gradient Boosting (previsão direta, um modelo por horizonte) vence em 1 mês e de 4 a 6 meses. O SARIMA sazonal empata em 2 e 3 meses. O SARIMA(2,1,1) piora muito nos horizontes longos.
+- **O erro cresce com o horizonte**, como esperado. A tabela de RMSE por horizonte, comparada a duas referências simples (persistência e persistência com variação sazonal), está no notebook.
+- **A faixa de 80% perde cobertura nos horizontes longos** (cerca de 55% e 52% em 5 e 6 meses). Por isso o painel marca essas previsões como de baixa confiança.
+- **Cenários de ENA climatológica não são uma banda calibrada** (cobertura de 25% a 36%), e por isso não são apresentados como intervalo.
+- **Mudanças de bandeira são difíceis de antecipar.** Repetir a bandeira do mês anterior é uma referência forte. O alerta estatístico acertou 3 de 12 mudanças, com 6 alarmes falsos em 46 meses sem mudança, e a diferença de F1 em relação à persistência é inconclusiva (IC 95%: de -0,261 a 0,065).
+- **Mudança de regime desde 2022.** Com mais geração eólica e solar e menos térmica, o nível da EAR deixou de separar bem as bandeiras. Por isso a bandeira não é derivada da EAR. A revisão da capacidade máxima pelo ONS em 2026 é outra fonte de deriva.
 
 ## Objetivos de Desenvolvimento Sustentável (ODS)
 
 - **ODS 11**: Cidades e Comunidades Sustentáveis (principal)
-- **ODS 8**: Trabalho Decente e Crescimento Econômico (secundária)
+- **ODS 7**: Energia Limpa e Acessível (complementar), em especial a meta 7.1, de acesso a serviços de energia confiáveis e a preços acessíveis
+
+O painel é público e gratuito, e o código, os dados e o notebook são abertos e reutilizáveis.
 
 ## Fontes de dados
 
-- **ONS, Portal de Dados Abertos** (dados.ons.org.br): Energia Armazenada (EAR) e Energia Natural Afluente (ENA) por subsistema, em base diária de 2000 a 2026, coletadas de forma automatizada pelo bucket público na AWS (`ons-aws-prod-opendata`). A geração solar e eólica está prevista para a Etapa 4.
-- **ANEEL, Portal de Dados Abertos**: histórico de acionamento de bandeiras tarifárias, previsto para a Etapa 4.
+Todas as fontes são primárias e abertas.
+
+- **ONS, Portal de Dados Abertos** (dados.ons.org.br): EAR e ENA por subsistema, em base diária de 2000 a 2026, coletadas de forma automatizada pelo bucket público na AWS (`ons-aws-prod-opendata`). A série é agregada ao passo mensal na modelagem.
+- **ANEEL, Portal de Dados Abertos**: histórico de acionamento das bandeiras tarifárias (Verde, Amarela, Vermelha com patamares 1 e 2, e Escassez Hídrica) e seus valores, no conjunto de dados de bandeira tarifária de acionamento (`resource_id` `0591b8f6-fe54-437b-b72b-1aa2efd46e42`). A data da última consulta fica registrada no campo `fonte_aneel_gerado_em` do arquivo `data/processed/painel_hidrico.json`.
 
 ## Estrutura do repositório
 
@@ -58,41 +50,57 @@ As variantes "com ENA do mês alvo" são cenários condicionais, pois assumem a 
 ├── README.md
 ├── requirements.txt
 ├── notebooks/
-│   └── cd_projeto_aplicado_IV_doc.ipynb   # Notebook principal do projeto
+│   └── cd_projeto_aplicado_IV_doc.ipynb   # Notebook principal (executável do início ao fim)
 ├── scripts/
 │   ├── explorar_bucket_ons.py             # Descoberta dos datasets no bucket do ONS
 │   ├── baixar_dados_ons.py                # Download automatizado de EAR e ENA
 │   └── listar_arquivos_ear_ena.py         # Listagem dos arquivos disponíveis
 ├── data/
-│   ├── raw/
-│   │   ├── ear_subsistema/                # EAR diário por subsistema (2000-2026)
-│   │   └── ena_subsistema/                # ENA diário por subsistema (2000-2026)
+│   ├── raw/                               # Dados brutos (ONS e ANEEL)
 │   └── processed/                         # Gerados pelo notebook
-│       ├── se_diario.csv                  # EAR e ENA diárias do Sudeste/Centro-Oeste
-│       ├── se_mensal.csv                  # Série mensal usada na modelagem
-│       └── resultados_modelo_base.csv     # Métricas dos modelos no teste
-└── docs/
-    └── img/                                # Figuras e diagramas usados no notebook
+│       ├── se_diario.csv
+│       ├── se_mensal.csv
+│       ├── resultados_modelo_base.csv
+│       └── painel_hidrico.json            # Contrato de dados consumido pelo painel
+├── docs/
+│   └── img/                               # Figuras e diagramas
+├── web/                                   # Painel (React + Vite), publicado no GitHub Pages
+└── .github/workflows/pages.yml            # Build e deploy automáticos do painel
 ```
 
-## Como executar
+## Como reproduzir
+
+### 1. Notebook (modelos, avaliação e geração do JSON do painel)
 
 1. Clone o repositório e crie um ambiente virtual Python:
 ```bash
-   python -m venv venv
+python -m venv venv
 ```
 2. Ative o ambiente:
    - Windows (PowerShell): `venv\Scripts\Activate.ps1`
    - Mac/Linux: `source venv/bin/activate`
 3. Instale as dependências:
 ```bash
-   pip install -r requirements.txt
+pip install -r requirements.txt
 ```
-4. (Opcional) Para atualizar os dados brutos, execute os scripts de coleta:
+4. (Opcional) Para atualizar os dados brutos do ONS:
 ```bash
-   python scripts/baixar_dados_ons.py
+python scripts/baixar_dados_ons.py
 ```
-5. Abra `notebooks/cd_projeto_aplicado_IV_doc.ipynb` no Jupyter ou no VS Code, selecione o kernel do `venv` e use **Run All**. O notebook deve ser executado a partir da pasta `notebooks/`, pois usa caminhos relativos (`../data` e `../docs/img`). A execução completa leva cerca de 1 minuto e gera as figuras em `docs/img` e os dados tratados em `data/processed`.
+5. Abra `notebooks/cd_projeto_aplicado_IV_doc.ipynb` no Jupyter ou no VS Code, selecione o kernel do `venv` e use **Restart e Run All**. O notebook deve ser executado a partir da pasta `notebooks/`, pois usa caminhos relativos (`../data` e `../docs/img`). Ele gera as figuras em `docs/img` e os dados tratados em `data/processed`, incluindo `painel_hidrico.json`.
+
+### 2. Painel web
+
+Requer Node 20 ou superior (testado com Node 22).
+
+```bash
+cd web
+npm install
+npm run dev      # servidor local
+npm run build    # gera web/dist
+```
+
+O painel lê `data/processed/painel_hidrico.json`, copiado para `web/public/dados/` automaticamente antes do `dev` e do `build`. A cada push na branch `main` que altere `web/`, o JSON ou o workflow, o GitHub Actions compila e publica o painel no GitHub Pages.
 
 ## Cronograma de entregas
 
@@ -103,8 +111,15 @@ As variantes "com ENA do mês alvo" são cenários condicionais, pois assumem a 
 | Entrega 1 | 17/08 | 31/08 | Definição do tema, equipe, base de dados, documentação inicial | Concluída |
 | Entrega 2 | 14/09 | 28/09 | Referencial teórico, pipeline da solução, cronograma | Concluída |
 | Entrega 3 | 05/10 | 26/10 | EDA, pré-processamento, modelo base | Concluída |
-| Entrega 4 | 02/11 | 30/11 | Implementação final, apresentação, documentação completa | Em andamento |
+| Entrega 4 | 02/11 | 30/11 | Implementação final, painel, apresentação, documentação completa | Em fechamento |
+
+## Limitações e trabalhos futuros
+
+- O risco usa um critério convencional (percentis 20 e 40 do mês), não calibrado em custo ou impacto.
+- A previsão cobre o subsistema Sudeste/Centro-Oeste. A extensão para Sul, Nordeste e Norte reaproveita o mesmo pipeline.
+- A atualização dos dados é manual. Um workflow mensal automático de coleta, reprocessamento e publicação é o próximo passo natural.
+- Incorporar variáveis de oferta e demanda (geração solar e eólica, carga) pode ajudar a captar a mudança de regime observada desde 2022.
 
 ## Licença
 
-A definir.
+O código é distribuído sob a licença MIT (arquivo `LICENSE`). Os dados pertencem às fontes originais (ONS e ANEEL), que os disponibilizam como dados abertos.

@@ -21,14 +21,16 @@ export default function Sobre({ painel }) {
 
       <div className="miolo-sobre">
         <section className="cartao" aria-labelledby="s-ods">
-          <h2 id="s-ods" className="rotulo-h">Objetivo de Desenvolvimento Sustentável</h2>
-          <div className="ods">
-            <span className="ods-selo" aria-hidden="true">{ODS.numero}</span>
-            <div>
-              <h3>ODS {ODS.numero}: {ODS.titulo}</h3>
-              <p>{ODS.texto}</p>
+          <h2 id="s-ods" className="rotulo-h">Objetivos de Desenvolvimento Sustentável</h2>
+          {ODS.map((o) => (
+            <div className="ods" key={o.numero}>
+              <span className="ods-selo" aria-hidden="true" style={{ background: o.cor }}>{o.numero}</span>
+              <div>
+                <h3>ODS {o.numero}: {o.titulo} <small>({o.papel})</small></h3>
+                <p>{o.texto}</p>
+              </div>
             </div>
-          </div>
+          ))}
           <p className="apoio">
             O painel é público, gratuito e aberto: o código, os dados e o notebook estão no repositório e podem ser
             reutilizados.

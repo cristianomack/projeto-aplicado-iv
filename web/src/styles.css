@@ -200,4 +200,5 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--acento); outlin
 .lista-simples { display: flex; flex-direction: column; gap: 8px; list-style: disc; padding-left: 20px; }
 .ods { display: flex; gap: 14px; align-items: flex-start; }
 .ods h3 { font-size: 16px; margin-bottom: 4px; }
-.ods-selo { flex: none; width: 56px; height: 56px; border-radius: 8px; background: #fcc30b; color: #10222e; display: grid; place-items: center; font: 700 28px "IBM Plex Sans", sans-serif; }
+.ods-selo { flex: none; width: 56px; height: 56px; border-radius: 8px; color: #10222e; display: grid; place-items: center; font: 700 28px "IBM Plex Sans", sans-serif; }
+.ods h3 small { font-weight: 500; color: var(--texto-2); font-size: 13px; }
