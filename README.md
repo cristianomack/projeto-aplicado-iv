@@ -118,7 +118,7 @@ O painel lê `data/processed/painel_hidrico.json`, copiado para `web/public/dado
 - O risco usa um critério convencional (percentis 20 e 40 do mês), não calibrado em custo ou impacto.
 - A previsão cobre o subsistema Sudeste/Centro-Oeste. A extensão para Sul, Nordeste e Norte reaproveita o mesmo pipeline.
 - A atualização dos dados é manual. Um workflow mensal automático de coleta, reprocessamento e publicação é o próximo passo natural.
-- Incorporar variáveis de oferta e demanda (geração solar e eólica, carga) pode ajudar a captar a mudança de regime observada desde 2022.
+- Levar a geração solar, eólica e térmica (hoje usada só na classificação da bandeira) e a carga à previsão da EAR pode ajudar a captar a mudança de regime observada desde 2022.
 
 ## Licença
 
