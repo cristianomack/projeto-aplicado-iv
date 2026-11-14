@@ -1,0 +1,342 @@
+{
+  "regiao": "Sudeste/Centro-Oeste",
+  "unidade": "% da capacidade de armazenamento (EAR)",
+  "origem": "2026-10",
+  "intervalo_nivel": 0.8,
+  "criterio_risco": "Alto: abaixo do percentil 20 da EAR histórica do mês; Atenção: abaixo do 40; Baixo: acima",
+  "situacao": {
+    "mes": "2026-10",
+    "ear": 54.9174,
+    "percentil_do_mes": 77.77777777777779,
+    "risco": "Baixo"
+  },
+  "historico": [
+    {
+      "mes": "2024-11",
+      "ear": 42.65
+    },
+    {
+      "mes": "2024-12",
+      "ear": 50.97
+    },
+    {
+      "mes": "2025-01",
+      "ear": 62.03
+    },
+    {
+      "mes": "2025-02",
+      "ear": 68.75
+    },
+    {
+      "mes": "2025-03",
+      "ear": 68.45
+    },
+    {
+      "mes": "2025-04",
+      "ear": 70.15
+    },
+    {
+      "mes": "2025-05",
+      "ear": 68.42
+    },
+    {
+      "mes": "2025-06",
+      "ear": 66.47
+    },
+    {
+      "mes": "2025-07",
+      "ear": 63.05
+    },
+    {
+      "mes": "2025-08",
+      "ear": 57.72
+    },
+    {
+      "mes": "2025-09",
+      "ear": 50.27
+    },
+    {
+      "mes": "2025-10",
+      "ear": 44.31
+    },
+    {
+      "mes": "2025-11",
+      "ear": 41.6
+    },
+    {
+      "mes": "2025-12",
+      "ear": 42.13
+    },
+    {
+      "mes": "2026-01",
+      "ear": 47.5
+    },
+    {
+      "mes": "2026-02",
+      "ear": 57.4
+    },
+    {
+      "mes": "2026-03",
+      "ear": 65.38
+    },
+    {
+      "mes": "2026-04",
+      "ear": 66.21
+    },
+    {
+      "mes": "2026-05",
+      "ear": 66.19
+    },
+    {
+      "mes": "2026-06",
+      "ear": 65.55
+    },
+    {
+      "mes": "2026-07",
+      "ear": 62.96
+    },
+    {
+      "mes": "2026-08",
+      "ear": 57.98
+    },
+    {
+      "mes": "2026-09",
+      "ear": 56.43
+    },
+    {
+      "mes": "2026-10",
+      "ear": 54.92
+    }
+  ],
+  "previsao": [
+    {
+      "horizonte": 1,
+      "mes": "2026-11",
+      "ear": 54.59,
+      "inf": 50.65,
+      "sup": 57.62,
+      "risco": "Baixo",
+      "risco_inf": "Baixo",
+      "risco_sup": "Baixo",
+      "limite_alto": 22.21,
+      "limite_atencao": 33.47,
+      "confianca": "boa",
+      "incerto": false
+    },
+    {
+      "horizonte": 2,
+      "mes": "2026-12",
+      "ear": 57.56,
+      "inf": 51.12,
+      "sup": 61.95,
+      "risco": "Baixo",
+      "risco_inf": "Baixo",
+      "risco_sup": "Baixo",
+      "limite_alto": 27.46,
+      "limite_atencao": 33.74,
+      "confianca": "boa",
+      "incerto": false
+    },
+    {
+      "horizonte": 3,
+      "mes": "2027-01",
+      "ear": 66.12,
+      "inf": 54.37,
+      "sup": 73.37,
+      "risco": "Baixo",
+      "risco_inf": "Baixo",
+      "risco_sup": "Baixo",
+      "limite_alto": 31.22,
+      "limite_atencao": 42.8,
+      "confianca": "boa",
+      "incerto": false
+    },
+    {
+      "horizonte": 4,
+      "mes": "2027-02",
+      "ear": 71.3,
+      "inf": 57.94,
+      "sup": 79.32,
+      "risco": "Baixo",
+      "risco_inf": "Baixo",
+      "risco_sup": "Baixo",
+      "limite_alto": 37.47,
+      "limite_atencao": 53.52,
+      "confianca": "moderada",
+      "incerto": false
+    },
+    {
+      "horizonte": 5,
+      "mes": "2027-03",
+      "ear": 72.19,
+      "inf": 55.96,
+      "sup": 77.99,
+      "risco": "Baixo",
+      "risco_inf": "Atenção",
+      "risco_sup": "Baixo",
+      "limite_alto": 41.63,
+      "limite_atencao": 60.41,
+      "confianca": "baixa",
+      "incerto": true
+    },
+    {
+      "horizonte": 6,
+      "mes": "2027-04",
+      "ear": 69.89,
+      "inf": 51.83,
+      "sup": 74.69,
+      "risco": "Baixo",
+      "risco_inf": "Atenção",
+      "risco_sup": "Baixo",
+      "limite_alto": 44.22,
+      "limite_atencao": 64.02,
+      "confianca": "baixa",
+      "incerto": true
+    }
+  ],
+  "avaliacao_teste": {
+    "rmse_pp": {
+      "1": 2.6,
+      "2": 5.64,
+      "3": 7.28,
+      "4": 8.68,
+      "5": 10.28,
+      "6": 11.36
+    },
+    "cobertura_intervalo": {
+      "1": 0.81,
+      "2": 0.741,
+      "3": 0.776,
+      "4": 0.672,
+      "5": 0.552,
+      "6": 0.517
+    }
+  },
+  "bandeira": {
+    "vigente": {
+      "mes": "2026-11",
+      "bandeira": "Verde",
+      "nome_aneel": "Verde",
+      "mes_anterior": "Verde"
+    },
+    "resumo_alerta": {
+      "modelo": "Random Forest | SIN + balanço + bandeira anterior",
+      "mudancas_acertadas": 3,
+      "mudancas_total": 12,
+      "alarmes_falsos": 6,
+      "meses_sem_mudanca": 46,
+      "persistencia_mudancas_acertadas": 0
+    },
+    "historico_alerta": [
+      {
+        "mes": "2025-11",
+        "real": "Vermelha",
+        "anterior": "Vermelha",
+        "modelo": "Vermelha",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2025-12",
+        "real": "Amarela",
+        "anterior": "Vermelha",
+        "modelo": "Amarela",
+        "alerta": true,
+        "mudou": true,
+        "acertou": true
+      },
+      {
+        "mes": "2026-01",
+        "real": "Verde",
+        "anterior": "Amarela",
+        "modelo": "Amarela",
+        "alerta": false,
+        "mudou": true,
+        "acertou": false
+      },
+      {
+        "mes": "2026-02",
+        "real": "Verde",
+        "anterior": "Verde",
+        "modelo": "Verde",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2026-03",
+        "real": "Verde",
+        "anterior": "Verde",
+        "modelo": "Verde",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2026-04",
+        "real": "Verde",
+        "anterior": "Verde",
+        "modelo": "Verde",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2026-05",
+        "real": "Amarela",
+        "anterior": "Verde",
+        "modelo": "Verde",
+        "alerta": false,
+        "mudou": true,
+        "acertou": false
+      },
+      {
+        "mes": "2026-06",
+        "real": "Amarela",
+        "anterior": "Amarela",
+        "modelo": "Verde",
+        "alerta": true,
+        "mudou": false,
+        "acertou": false
+      },
+      {
+        "mes": "2026-07",
+        "real": "Amarela",
+        "anterior": "Amarela",
+        "modelo": "Amarela",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2026-08",
+        "real": "Amarela",
+        "anterior": "Amarela",
+        "modelo": "Verde",
+        "alerta": true,
+        "mudou": false,
+        "acertou": false
+      },
+      {
+        "mes": "2026-09",
+        "real": "Amarela",
+        "anterior": "Amarela",
+        "modelo": "Amarela",
+        "alerta": false,
+        "mudou": false,
+        "acertou": true
+      },
+      {
+        "mes": "2026-10",
+        "real": "Verde",
+        "anterior": "Amarela",
+        "modelo": "Amarela",
+        "alerta": false,
+        "mudou": true,
+        "acertou": false
+      }
+    ],
+    "aviso": "O alerta de mudança é gerado quando os dados do mês fecham. A persistência da bandeira é o baseline difícil de bater: o modelo antecipa parte das mudanças, ao custo de alarmes falsos. Estimativa estatística, não substitui a decisão oficial da ANEEL."
+  }
+}
