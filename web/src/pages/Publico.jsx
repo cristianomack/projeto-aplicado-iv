@@ -26,10 +26,15 @@ export default function Publico({ painel }) {
   return (
     <main className="pagina-publico">
       <header className="topo">
-        <p className="sobretitulo">Do reservatório à conta de luz</p>
-        <h1>Como estão os reservatórios da sua região</h1>
-        <p className="regiao">{painel.regiao}</p>
+        <div className="miolo">
+          <p className="sobretitulo">Do reservatório à conta de luz</p>
+          <h1>Como estão os reservatórios da sua região</h1>
+          <p className="regiao">{painel.regiao}</p>
+        </div>
       </header>
+
+      <div className="miolo colunas">
+      <div className="col">
 
       <section className="cartao" aria-labelledby="p-sit">
         <div className="situacao">
@@ -51,7 +56,7 @@ export default function Publico({ painel }) {
       <section className="cartao" aria-labelledby="p-evo">
         <h2 id="p-evo" className="rotulo-h">Evolução e previsão dos próximos 6 meses</h2>
         <Segmentado rotulo="Período" opcoes={PERIODOS} valor={periodo} onChange={setPeriodo} />
-        <EarChart medio historico={serie.slice(-periodo)} previsao={previsao} normal={normal} limites={false} />
+        <EarChart historico={serie.slice(-periodo)} previsao={previsao} normal={normal} limites={false} />
         <ul className="legenda-linha">
           <li><i className="tr" style={{ background: "#10222E" }} />Observada</li>
           <li><i className="tr" style={{ background: "#0F6E8C" }} />Previsão</li>
@@ -75,6 +80,8 @@ export default function Publico({ painel }) {
         )}
       </section>
 
+      </div>
+      <div className="col">
       <section className="cartao" aria-labelledby="p-band">
         <div className="linha-flex">
           <div>
@@ -118,7 +125,10 @@ export default function Publico({ painel }) {
         <Faq painel={painel} />
       </section>
 
-      <footer className="rodape">
+      </div>
+      </div>
+
+      <footer className="rodape miolo">
         <a href="#/tecnico">Ver detalhes técnicos</a>
         <span>Fontes: ONS e ANEEL, dados abertos.</span>
       </footer>

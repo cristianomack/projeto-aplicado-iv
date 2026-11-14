@@ -1,14 +1,17 @@
 import { mesCurto, pct } from "../format";
+import useLargura, { dimensoes } from "./useLargura";
 import { RISCO } from "./ui";
 
 /**
  * Série da EAR: histórico observado, previsão com faixa de 80% e, na versão completa,
  * limites de risco do mês-alvo. SVG puro, sem biblioteca de gráficos.
  */
-export default function EarChart({ historico, previsao, compacto = false, medio = false, normal = null, limites = true }) {
-  const W = compacto ? 320 : medio ? 380 : 780;
-  const H = compacto ? 96 : medio ? 250 : 320;
-  const m = compacto ? { l: 6, r: 6, t: 16, b: 20 } : medio ? { l: 34, r: 12, t: 18, b: 30 } : { l: 48, r: 20, t: 18, b: 36 };
+export default function EarChart({ historico, previsao, compacto = false, normal = null, limites = true }) {
+  const [caixa, largura] = useLargura();
+  const d = dimensoes(largura);
+  const W = compacto ? 320 : d.W;
+  const H = compacto ? 96 : d.H;
+  const m = compacto ? { l: 6, r: 6, t: 16, b: 20 } : d.m;
   const nH = historico.length;
   const nF = previsao.length;
   const total = nH + nF;
@@ -65,6 +68,7 @@ export default function EarChart({ historico, previsao, compacto = false, medio 
   const resumo = `Energia armazenada: ${pct(ultimo.ear)} em ${mesCurto(ultimo.mes)}; previsão de ${pct(previsao[0].ear)} em ${mesCurto(previsao[0].mes)} e ${pct(previsao[nF - 1].ear)} em ${mesCurto(previsao[nF - 1].mes)}.`;
 
   return (
+    <div ref={caixa} className="grafico-caixa">
     <svg viewBox={`0 0 ${W} ${H}`} role="img" aria-label={resumo} className="grafico">
       {!compacto &&
         grade.map((v) => (
@@ -95,7 +99,7 @@ export default function EarChart({ historico, previsao, compacto = false, medio 
         ))}
 
       {rotulosX.map((i) => (
-        <text key={i} x={x(i)} y={H - (compacto ? 4 : medio ? 8 : 12)} textAnchor={i === 0 && total <= 40 ? "start" : i >= total - 2 ? "end" : "middle"}
+        <text key={i} x={x(i)} y={H - (compacto ? 4 : d.estreito ? 8 : 12)} textAnchor={i === 0 && total <= 40 ? "start" : i >= total - 2 ? "end" : "middle"}
           className="eixo">
           {rotuloX(i)}
         </text>
@@ -104,5 +108,6 @@ export default function EarChart({ historico, previsao, compacto = false, medio 
         hoje
       </text>
     </svg>
+    </div>
   );
 }

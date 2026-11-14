@@ -1,11 +1,14 @@
 import { useMemo, useState } from "react";
 import { mesCurto, mesLongo, num, pct } from "../format";
+import useLargura, { dimensoes } from "./useLargura";
 
 const JANELA = 18; // meses de histórico mostrados antes da origem
 const SLOTS = 6;   // horizontes
 
 function GraficoBacktest({ hist, origem, previsoes }) {
-  const W = 780, H = 300, m = { l: 48, r: 20, t: 18, b: 36 };
+  const [caixa, largura] = useLargura();
+  const { W, H: Haut, m } = dimensoes(largura);
+  const H = Math.min(Haut, 320);
   const total = hist.length + SLOTS;
   const nH = hist.length;
   const todos = [
@@ -37,6 +40,7 @@ function GraficoBacktest({ hist, origem, previsoes }) {
   if (alvoFinal) rotulos.push([pos(alvoFinal), mesCurto(alvoFinal.mes)]);
 
   return (
+    <div ref={caixa} className="grafico-caixa">
     <svg viewBox={`0 0 ${W} ${H}`} role="img" className="grafico"
       aria-label={`Previsão feita em ${mesLongo(origem)} comparada com o que ocorreu depois.`}>
       {grade.map((v) => (
@@ -63,6 +67,7 @@ function GraficoBacktest({ hist, origem, previsoes }) {
       ))}
       <text x={o[0]} y={m.t - 4} textAnchor="middle" className="eixo-sans">origem</text>
     </svg>
+    </div>
   );
 }
 

@@ -46,15 +46,16 @@ ul, ol { padding: 0; margin: 0; list-style: none; }
 .pill-grande { padding: 8px 16px; font-size: 17px; }
 .incerto { font-size: 12px; color: #7a4f0a; font-weight: 600; }
 
-.grafico { width: 100%; height: auto; display: block; margin-top: 10px; }
+.grafico-caixa { width: 100%; min-width: 0; margin-top: 10px; }
+.grafico { width: 100%; height: auto; display: block; }
 .eixo { font: 11px "IBM Plex Mono", monospace; fill: var(--texto-2); }
 .eixo-sans { font: 11px "IBM Plex Sans", sans-serif; fill: var(--texto-2); }
 
 /* Painel público */
-.pagina-publico { max-width: 520px; margin: 0 auto; display: flex; flex-direction: column; gap: 12px; padding-bottom: 32px; }
+.pagina-publico { display: flex; flex-direction: column; gap: 12px; padding-bottom: 32px; }
 .pagina-publico .topo { background: var(--marca); color: #fff; padding: 20px 20px 16px; }
 .pagina-publico .topo h1 { font-size: 22px; line-height: 1.25; font-weight: 700; }
-.pagina-publico > .cartao, .pagina-publico > .rodape { margin: 0 16px; }
+
 .situacao { display: flex; align-items: center; gap: 16px; }
 .situacao h2 { font-size: 28px; line-height: 1.1; font-weight: 700; margin: 2px 0 4px; }
 .situacao p:last-child { font-size: 14px; line-height: 1.45; color: #2a4352; }
@@ -111,7 +112,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--acento); outlin
 .rolagem-vertical thead th { position: sticky; top: 0; background: var(--cartao); }
 
 /* Painel público: blocos novos */
-.pagina-publico { max-width: 560px; }
+
 .sub { font-size: 14px; font-weight: 600; color: var(--texto-2); margin: 16px 0 8px; }
 .termometro .barra { position: relative; height: 22px; border-radius: 6px; overflow: visible; background: #eef3f5; margin-top: 26px; }
 .termometro .zona { position: absolute; top: 0; bottom: 0; }
@@ -157,3 +158,22 @@ a:focus-visible, button:focus-visible { outline: 3px solid var(--acento); outlin
 .valor .pill { justify-self: start; }
 .como-ler { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--info-borda); font-size: 13px; line-height: 1.5; }
 .destaque p + p { margin-top: 6px; }
+
+/* Layout do painel público: coluna única no celular, duas colunas no computador */
+.pagina-publico .miolo { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 16px; }
+.pagina-publico .topo { padding: 20px 0 16px; }
+.pagina-publico .topo .miolo { padding: 0 20px; }
+.colunas { display: flex; flex-direction: column; gap: 12px; }
+.col { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+@media (min-width: 960px) {
+  .pagina-publico { gap: 20px; }
+  .pagina-publico .miolo { max-width: 1160px; padding: 0 24px; }
+  .pagina-publico .topo { padding: 28px 0 24px; }
+  .pagina-publico .topo .miolo { padding: 0 24px; }
+  .pagina-publico .topo h1 { font-size: 32px; }
+  .colunas { display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(0, 1fr); gap: 20px; align-items: start; }
+  .col { gap: 20px; }
+  .pagina-publico .cartao { padding: 20px 24px; }
+  .pagina-publico .cartao h2 { font-size: 18px; }
+  .pagina-publico .situacao h2 { font-size: 32px; }
+}
