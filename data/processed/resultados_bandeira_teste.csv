@@ -1,0 +1,14 @@
+modelo,acurácia,acurácia balanceada,F1 macro,erros Verde↔Vermelha
+Persistência (baseline),0.804,0.699,0.696,2
+Random Forest | SIN + bandeira anterior,0.768,0.579,0.589,3
+Regressão logística | SIN + bandeira anterior,0.732,0.523,0.546,2
+Random Forest | Sudeste/Centro-Oeste + bandeira anterior,0.732,0.528,0.508,4
+Regressão logística | Sudeste/Centro-Oeste + bandeira anterior,0.732,0.509,0.495,5
+Regressão logística | SIN + balanço de geração + bandeira anterior,0.679,0.486,0.474,3
+Random Forest | SIN + balanço de geração + bandeira anterior,0.696,0.449,0.457,5
+Regressão logística | SIN + balanço de geração,0.625,0.583,0.429,2
+Random Forest | SIN,0.661,0.412,0.414,11
+Random Forest | Sudeste/Centro-Oeste,0.643,0.384,0.367,10
+Random Forest | SIN + balanço de geração,0.643,0.366,0.324,10
+Regressão logística | Sudeste/Centro-Oeste,0.643,0.333,0.264,11
+Regressão logística | SIN,0.643,0.333,0.261,12

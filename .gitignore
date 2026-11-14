@@ -20,3 +20,4 @@ Thumbs.db
 
 # Dados brutos pesados (ajustar conforme necessidade do projeto)
 # data/raw/*.csv
+data/raw/balanco_energia_subsistema/
