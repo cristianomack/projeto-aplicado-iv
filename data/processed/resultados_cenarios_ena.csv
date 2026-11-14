@@ -1,0 +1,7 @@
+horizonte (meses),RMSE com ENA realizada,RMSE cenário médio,RMSE sem ENA futura,cobertura do intervalo baixa-alta,largura média (p.p.)
+1,1.825,3.606,2.573,0.286,2.493
+2,4.004,7.248,5.584,0.357,5.564
+3,5.844,9.486,7.232,0.357,8.466
+4,7.765,11.333,8.649,0.25,10.726
+5,9.558,13.581,10.193,0.304,12.654
+6,11.213,14.783,11.347,0.357,13.782
