@@ -41,6 +41,7 @@ O painel é público e gratuito, e o código, os dados e o notebook são abertos
 Todas as fontes são primárias e abertas.
 
 - **ONS, Portal de Dados Abertos** (dados.ons.org.br): EAR e ENA por subsistema, em base diária de 2000 a 2026, coletadas de forma automatizada pelo bucket público na AWS (`ons-aws-prod-opendata`). A série é agregada ao passo mensal na modelagem.
+- **ONS, balanço de energia por subsistema** (base horária): geração por fonte (térmica, eólica, solar e hidráulica), agregada ao mês e usada como variável na classificação da bandeira (fração térmica e fração eólica e solar).
 - **ANEEL, Portal de Dados Abertos**: histórico de acionamento das bandeiras tarifárias (Verde, Amarela, Vermelha com patamares 1 e 2, e Escassez Hídrica) e seus valores, no conjunto de dados de bandeira tarifária de acionamento (`resource_id` `0591b8f6-fe54-437b-b72b-1aa2efd46e42`). A data da última consulta fica registrada no campo `fonte_aneel_gerado_em` do arquivo `data/processed/painel_hidrico.json`.
 
 ## Estrutura do repositório
@@ -48,21 +49,30 @@ Todas as fontes são primárias e abertas.
 ```
 .
 ├── README.md
+├── LICENSE
 ├── requirements.txt
 ├── notebooks/
 │   └── cd_projeto_aplicado_IV_doc.ipynb   # Notebook principal (executável do início ao fim)
 ├── scripts/
 │   ├── explorar_bucket_ons.py             # Descoberta dos datasets no bucket do ONS
+│   ├── listar_arquivos_ear_ena.py         # Listagem dos arquivos de EAR e ENA
 │   ├── baixar_dados_ons.py                # Download automatizado de EAR e ENA
-│   └── listar_arquivos_ear_ena.py         # Listagem dos arquivos disponíveis
+│   ├── listar_datasets_geracao.py         # Descoberta dos datasets de geração
+│   ├── explorar_balanco_ons.py            # Exploração do balanço de energia
+│   └── baixar_balanco_ons.py              # Download do balanço de energia por subsistema
 ├── data/
-│   ├── raw/                               # Dados brutos (ONS e ANEEL)
+│   ├── raw/
+│   │   ├── ear_subsistema/                # EAR diário (ONS)
+│   │   ├── ena_subsistema/                # ENA diária (ONS)
+│   │   ├── balanco_energia_subsistema/    # Balanço de energia horário (ONS)
+│   │   └── aneel_bandeiras/               # Acionamento das bandeiras (ANEEL)
 │   └── processed/                         # Gerados pelo notebook
 │       ├── se_diario.csv
 │       ├── se_mensal.csv
 │       ├── resultados_modelo_base.csv
 │       └── painel_hidrico.json            # Contrato de dados consumido pelo painel
 ├── docs/
+│   ├── dm-bandeira-tarifaria-acionamento.pdf   # Dicionário de dados da ANEEL
 │   └── img/                               # Figuras e diagramas
 ├── web/                                   # Painel (React + Vite), publicado no GitHub Pages
 └── .github/workflows/pages.yml            # Build e deploy automáticos do painel
@@ -86,7 +96,9 @@ pip install -r requirements.txt
 4. (Opcional) Para atualizar os dados brutos do ONS:
 ```bash
 python scripts/baixar_dados_ons.py
+python scripts/baixar_balanco_ons.py
 ```
+   Os dados brutos já acompanham o repositório, então o download só é necessário para atualizá-los.
 5. Abra `notebooks/cd_projeto_aplicado_IV_doc.ipynb` no Jupyter ou no VS Code, selecione o kernel do `venv` e use **Restart e Run All**. O notebook deve ser executado a partir da pasta `notebooks/`, pois usa caminhos relativos (`../data` e `../docs/img`). Ele gera as figuras em `docs/img` e os dados tratados em `data/processed`, incluindo `painel_hidrico.json`.
 
 ### 2. Painel web
