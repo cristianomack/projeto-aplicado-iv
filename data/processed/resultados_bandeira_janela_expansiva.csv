@@ -1,14 +1,14 @@
 modelo,acurácia,acurácia balanceada,F1 macro,mudanças acertadas,alarmes falsos,F1 macro (validação)
-Persistência (baseline),0.804,0.699,0.696,0/11,0/45,
-Regressão logística | SIN + balanço relativo + bandeira anterior,0.768,0.606,0.64,4/11,6/45,0.633
-Random Forest | SIN + balanço + bandeira anterior,0.75,0.565,0.589,3/11,6/45,0.754
-Random Forest | SIN + bandeira anterior,0.786,0.611,0.572,2/11,3/45,0.663
-Random Forest | SIN + balanço relativo + bandeira anterior,0.768,0.583,0.552,1/11,3/45,0.695
-Regressão logística | SIN + balanço + bandeira anterior,0.696,0.505,0.508,1/11,7/45,0.556
-Regressão logística | SIN + bandeira anterior,0.732,0.528,0.502,2/11,6/45,0.573
-Regressão logística | SIN + balanço relativo,0.696,0.444,0.433,6/11,12/45,0.607
-Random Forest | SIN + balanço,0.679,0.421,0.418,4/11,11/45,0.585
-Random Forest | SIN,0.661,0.412,0.414,3/11,11/45,0.555
-Regressão logística | SIN + balanço,0.661,0.398,0.394,3/11,11/45,0.612
-Random Forest | SIN + balanço relativo,0.643,0.384,0.367,3/11,12/45,0.556
-Regressão logística | SIN,0.643,0.366,0.321,5/11,14/45,0.524
+Persistência (baseline),0.793,0.714,0.707,0/12,0/46,
+Regressão logística | SIN + balanço relativo + bandeira anterior,0.759,0.593,0.628,5/12,7/46,0.633
+Random Forest | SIN + balanço + bandeira anterior,0.741,0.584,0.608,3/12,6/46,0.754
+Random Forest | SIN + bandeira anterior,0.759,0.603,0.564,2/12,4/46,0.663
+Regressão logística | SIN + bandeira anterior,0.741,0.566,0.551,3/12,6/46,0.573
+Random Forest | SIN + balanço relativo + bandeira anterior,0.741,0.575,0.545,1/12,4/46,0.695
+Regressão logística | SIN + balanço + bandeira anterior,0.707,0.538,0.541,2/12,7/46,0.556
+Regressão logística | SIN + balanço relativo,0.69,0.435,0.424,7/12,13/46,0.607
+Random Forest | SIN + balanço,0.672,0.417,0.412,5/12,12/46,0.585
+Random Forest | SIN,0.638,0.399,0.397,4/12,13/46,0.555
+Regressão logística | SIN + balanço,0.655,0.399,0.392,4/12,12/46,0.612
+Random Forest | SIN + balanço relativo,0.638,0.38,0.361,4/12,13/46,0.556
+Regressão logística | SIN,0.638,0.361,0.315,6/12,15/46,0.524

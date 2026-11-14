@@ -1,31 +1,31 @@
 horizonte (meses),modelo,RMSE (p.p.),MAE (p.p.)
-1,Persistência,6.073,4.694
-1,Persistência + variação sazonal,3.165,2.185
-1,"SARIMA(2,1,1)",3.548,2.759
-1,"SARIMA(1,1,1)(0,1,1,12)",2.867,2.045
-1,Gradient Boosting (sem ENA futura),2.573,1.763
-2,Persistência,11.388,9.031
-2,Persistência + variação sazonal,5.468,3.842
-2,"SARIMA(2,1,1)",7.908,5.995
-2,"SARIMA(1,1,1)(0,1,1,12)",5.352,3.8
-2,Gradient Boosting (sem ENA futura),5.584,3.981
-3,Persistência,15.77,12.875
-3,Persistência + variação sazonal,7.305,5.397
-3,"SARIMA(2,1,1)",11.899,9.294
-3,"SARIMA(1,1,1)(0,1,1,12)",7.141,5.313
-3,Gradient Boosting (sem ENA futura),7.232,5.34
-4,Persistência,19.231,16.155
-4,Persistência + variação sazonal,9.092,6.86
-4,"SARIMA(2,1,1)",15.431,12.251
-4,"SARIMA(1,1,1)(0,1,1,12)",8.974,6.747
-4,Gradient Boosting (sem ENA futura),8.649,6.931
-5,Persistência,21.624,18.449
-5,Persistência + variação sazonal,10.769,8.305
-5,"SARIMA(2,1,1)",18.061,14.126
-5,"SARIMA(1,1,1)(0,1,1,12)",10.772,8.229
-5,Gradient Boosting (sem ENA futura),10.193,8.244
-6,Persistência,22.951,19.324
-6,Persistência + variação sazonal,12.3,9.708
-6,"SARIMA(2,1,1)",19.692,15.218
-6,"SARIMA(1,1,1)(0,1,1,12)",12.382,9.708
-6,Gradient Boosting (sem ENA futura),11.347,9.002
+1,Persistência,5.976,4.587
+1,Persistência + variação sazonal,3.221,2.262
+1,"SARIMA(2,1,1)",3.506,2.723
+1,"SARIMA(1,1,1)(0,1,1,12)",2.89,2.076
+1,Gradient Boosting (sem ENA futura),2.596,1.831
+2,Persistência,11.234,8.891
+2,Persistência + variação sazonal,5.564,3.971
+2,"SARIMA(2,1,1)",7.786,5.859
+2,"SARIMA(1,1,1)(0,1,1,12)",5.413,3.902
+2,Gradient Boosting (sem ENA futura),5.637,4.031
+3,Persistência,15.582,12.733
+3,Persistência + variação sazonal,7.37,5.515
+3,"SARIMA(2,1,1)",11.693,8.994
+3,"SARIMA(1,1,1)(0,1,1,12)",7.161,5.391
+3,Gradient Boosting (sem ENA futura),7.28,5.411
+4,Persistência,18.996,15.954
+4,Persistência + variação sazonal,9.138,6.97
+4,"SARIMA(2,1,1)",15.166,11.87
+4,"SARIMA(1,1,1)(0,1,1,12)",8.973,6.815
+4,Gradient Boosting (sem ENA futura),8.68,6.984
+5,Persistência,21.341,18.179
+5,Persistência + variação sazonal,10.791,8.4
+5,"SARIMA(2,1,1)",17.761,13.763
+5,"SARIMA(1,1,1)(0,1,1,12)",10.775,8.312
+5,Gradient Boosting (sem ENA futura),10.279,8.369
+6,Persistência,22.632,19.004
+6,Persistência + variação sazonal,12.266,9.747
+6,"SARIMA(2,1,1)",19.357,14.768
+6,"SARIMA(1,1,1)(0,1,1,12)",12.327,9.71
+6,Gradient Boosting (sem ENA futura),11.359,9.049
