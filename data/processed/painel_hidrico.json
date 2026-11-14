@@ -1,342 +1,6025 @@
 {
-  "regiao": "Sudeste/Centro-Oeste",
-  "unidade": "% da capacidade de armazenamento (EAR)",
-  "origem": "2026-10",
-  "intervalo_nivel": 0.8,
-  "criterio_risco": "Alto: abaixo do percentil 20 da EAR histórica do mês; Atenção: abaixo do 40; Baixo: acima",
-  "situacao": {
-    "mes": "2026-10",
-    "ear": 54.9174,
-    "percentil_do_mes": 77.77777777777779,
-    "risco": "Baixo"
+ "regiao": "Sudeste/Centro-Oeste",
+ "unidade": "% da capacidade de armazenamento (EAR)",
+ "origem": "2026-10",
+ "intervalo_nivel": 0.8,
+ "criterio_risco": "Alto: abaixo do percentil 20 da EAR histórica do mês; Atenção: abaixo do 40; Baixo: acima",
+ "situacao": {
+  "mes": "2026-10",
+  "ear": 54.9174,
+  "percentil_do_mes": 77.77777777777779,
+  "risco": "Baixo"
+ },
+ "historico": [
+  {
+   "mes": "2024-11",
+   "ear": 42.65
   },
-  "historico": [
-    {
-      "mes": "2024-11",
-      "ear": 42.65
-    },
-    {
-      "mes": "2024-12",
-      "ear": 50.97
-    },
-    {
-      "mes": "2025-01",
-      "ear": 62.03
-    },
-    {
-      "mes": "2025-02",
-      "ear": 68.75
-    },
-    {
-      "mes": "2025-03",
-      "ear": 68.45
-    },
-    {
-      "mes": "2025-04",
-      "ear": 70.15
-    },
-    {
-      "mes": "2025-05",
-      "ear": 68.42
-    },
-    {
-      "mes": "2025-06",
-      "ear": 66.47
-    },
-    {
-      "mes": "2025-07",
-      "ear": 63.05
-    },
-    {
-      "mes": "2025-08",
-      "ear": 57.72
-    },
-    {
-      "mes": "2025-09",
-      "ear": 50.27
-    },
-    {
-      "mes": "2025-10",
-      "ear": 44.31
-    },
-    {
-      "mes": "2025-11",
-      "ear": 41.6
-    },
-    {
-      "mes": "2025-12",
-      "ear": 42.13
-    },
-    {
-      "mes": "2026-01",
-      "ear": 47.5
-    },
-    {
-      "mes": "2026-02",
-      "ear": 57.4
-    },
-    {
-      "mes": "2026-03",
-      "ear": 65.38
-    },
-    {
-      "mes": "2026-04",
-      "ear": 66.21
-    },
-    {
-      "mes": "2026-05",
-      "ear": 66.19
-    },
-    {
-      "mes": "2026-06",
-      "ear": 65.55
-    },
-    {
-      "mes": "2026-07",
-      "ear": 62.96
-    },
-    {
-      "mes": "2026-08",
-      "ear": 57.98
-    },
-    {
-      "mes": "2026-09",
-      "ear": 56.43
-    },
-    {
-      "mes": "2026-10",
-      "ear": 54.92
-    }
-  ],
-  "previsao": [
-    {
-      "horizonte": 1,
-      "mes": "2026-11",
-      "ear": 54.59,
-      "inf": 50.65,
-      "sup": 57.62,
-      "risco": "Baixo",
-      "risco_inf": "Baixo",
-      "risco_sup": "Baixo",
-      "limite_alto": 22.21,
-      "limite_atencao": 33.47,
-      "confianca": "boa",
-      "incerto": false
-    },
-    {
-      "horizonte": 2,
-      "mes": "2026-12",
-      "ear": 57.56,
-      "inf": 51.12,
-      "sup": 61.95,
-      "risco": "Baixo",
-      "risco_inf": "Baixo",
-      "risco_sup": "Baixo",
-      "limite_alto": 27.46,
-      "limite_atencao": 33.74,
-      "confianca": "boa",
-      "incerto": false
-    },
-    {
-      "horizonte": 3,
-      "mes": "2027-01",
-      "ear": 66.12,
-      "inf": 54.37,
-      "sup": 73.37,
-      "risco": "Baixo",
-      "risco_inf": "Baixo",
-      "risco_sup": "Baixo",
-      "limite_alto": 31.22,
-      "limite_atencao": 42.8,
-      "confianca": "boa",
-      "incerto": false
-    },
-    {
-      "horizonte": 4,
-      "mes": "2027-02",
-      "ear": 71.3,
-      "inf": 57.94,
-      "sup": 79.32,
-      "risco": "Baixo",
-      "risco_inf": "Baixo",
-      "risco_sup": "Baixo",
-      "limite_alto": 37.47,
-      "limite_atencao": 53.52,
-      "confianca": "moderada",
-      "incerto": false
-    },
-    {
-      "horizonte": 5,
-      "mes": "2027-03",
-      "ear": 72.19,
-      "inf": 55.96,
-      "sup": 77.99,
-      "risco": "Baixo",
-      "risco_inf": "Atenção",
-      "risco_sup": "Baixo",
-      "limite_alto": 41.63,
-      "limite_atencao": 60.41,
-      "confianca": "baixa",
-      "incerto": true
-    },
-    {
-      "horizonte": 6,
-      "mes": "2027-04",
-      "ear": 69.89,
-      "inf": 51.83,
-      "sup": 74.69,
-      "risco": "Baixo",
-      "risco_inf": "Atenção",
-      "risco_sup": "Baixo",
-      "limite_alto": 44.22,
-      "limite_atencao": 64.02,
-      "confianca": "baixa",
-      "incerto": true
-    }
-  ],
-  "avaliacao_teste": {
-    "rmse_pp": {
-      "1": 2.6,
-      "2": 5.64,
-      "3": 7.28,
-      "4": 8.68,
-      "5": 10.28,
-      "6": 11.36
-    },
-    "cobertura_intervalo": {
-      "1": 0.81,
-      "2": 0.741,
-      "3": 0.776,
-      "4": 0.672,
-      "5": 0.552,
-      "6": 0.517
-    }
+  {
+   "mes": "2024-12",
+   "ear": 50.97
   },
-  "bandeira": {
-    "vigente": {
-      "mes": "2026-11",
-      "bandeira": "Verde",
-      "nome_aneel": "Verde",
-      "mes_anterior": "Verde"
-    },
-    "resumo_alerta": {
-      "modelo": "Random Forest | SIN + balanço + bandeira anterior",
-      "mudancas_acertadas": 3,
-      "mudancas_total": 12,
-      "alarmes_falsos": 6,
-      "meses_sem_mudanca": 46,
-      "persistencia_mudancas_acertadas": 0
-    },
-    "historico_alerta": [
-      {
-        "mes": "2025-11",
-        "real": "Vermelha",
-        "anterior": "Vermelha",
-        "modelo": "Vermelha",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2025-12",
-        "real": "Amarela",
-        "anterior": "Vermelha",
-        "modelo": "Amarela",
-        "alerta": true,
-        "mudou": true,
-        "acertou": true
-      },
-      {
-        "mes": "2026-01",
-        "real": "Verde",
-        "anterior": "Amarela",
-        "modelo": "Amarela",
-        "alerta": false,
-        "mudou": true,
-        "acertou": false
-      },
-      {
-        "mes": "2026-02",
-        "real": "Verde",
-        "anterior": "Verde",
-        "modelo": "Verde",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2026-03",
-        "real": "Verde",
-        "anterior": "Verde",
-        "modelo": "Verde",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2026-04",
-        "real": "Verde",
-        "anterior": "Verde",
-        "modelo": "Verde",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2026-05",
-        "real": "Amarela",
-        "anterior": "Verde",
-        "modelo": "Verde",
-        "alerta": false,
-        "mudou": true,
-        "acertou": false
-      },
-      {
-        "mes": "2026-06",
-        "real": "Amarela",
-        "anterior": "Amarela",
-        "modelo": "Verde",
-        "alerta": true,
-        "mudou": false,
-        "acertou": false
-      },
-      {
-        "mes": "2026-07",
-        "real": "Amarela",
-        "anterior": "Amarela",
-        "modelo": "Amarela",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2026-08",
-        "real": "Amarela",
-        "anterior": "Amarela",
-        "modelo": "Verde",
-        "alerta": true,
-        "mudou": false,
-        "acertou": false
-      },
-      {
-        "mes": "2026-09",
-        "real": "Amarela",
-        "anterior": "Amarela",
-        "modelo": "Amarela",
-        "alerta": false,
-        "mudou": false,
-        "acertou": true
-      },
-      {
-        "mes": "2026-10",
-        "real": "Verde",
-        "anterior": "Amarela",
-        "modelo": "Amarela",
-        "alerta": false,
-        "mudou": true,
-        "acertou": false
-      }
-    ],
-    "aviso": "O alerta de mudança é gerado quando os dados do mês fecham. A persistência da bandeira é o baseline difícil de bater: o modelo antecipa parte das mudanças, ao custo de alarmes falsos. Estimativa estatística, não substitui a decisão oficial da ANEEL."
+  {
+   "mes": "2025-01",
+   "ear": 62.03
+  },
+  {
+   "mes": "2025-02",
+   "ear": 68.75
+  },
+  {
+   "mes": "2025-03",
+   "ear": 68.45
+  },
+  {
+   "mes": "2025-04",
+   "ear": 70.15
+  },
+  {
+   "mes": "2025-05",
+   "ear": 68.42
+  },
+  {
+   "mes": "2025-06",
+   "ear": 66.47
+  },
+  {
+   "mes": "2025-07",
+   "ear": 63.05
+  },
+  {
+   "mes": "2025-08",
+   "ear": 57.72
+  },
+  {
+   "mes": "2025-09",
+   "ear": 50.27
+  },
+  {
+   "mes": "2025-10",
+   "ear": 44.31
+  },
+  {
+   "mes": "2025-11",
+   "ear": 41.6
+  },
+  {
+   "mes": "2025-12",
+   "ear": 42.13
+  },
+  {
+   "mes": "2026-01",
+   "ear": 47.5
+  },
+  {
+   "mes": "2026-02",
+   "ear": 57.4
+  },
+  {
+   "mes": "2026-03",
+   "ear": 65.38
+  },
+  {
+   "mes": "2026-04",
+   "ear": 66.21
+  },
+  {
+   "mes": "2026-05",
+   "ear": 66.19
+  },
+  {
+   "mes": "2026-06",
+   "ear": 65.55
+  },
+  {
+   "mes": "2026-07",
+   "ear": 62.96
+  },
+  {
+   "mes": "2026-08",
+   "ear": 57.98
+  },
+  {
+   "mes": "2026-09",
+   "ear": 56.43
+  },
+  {
+   "mes": "2026-10",
+   "ear": 54.92
   }
+ ],
+ "previsao": [
+  {
+   "horizonte": 1,
+   "mes": "2026-11",
+   "ear": 54.59,
+   "inf": 50.65,
+   "sup": 57.62,
+   "risco": "Baixo",
+   "risco_inf": "Baixo",
+   "risco_sup": "Baixo",
+   "limite_alto": 22.21,
+   "limite_atencao": 33.47,
+   "confianca": "boa",
+   "incerto": false
+  },
+  {
+   "horizonte": 2,
+   "mes": "2026-12",
+   "ear": 57.56,
+   "inf": 51.12,
+   "sup": 61.95,
+   "risco": "Baixo",
+   "risco_inf": "Baixo",
+   "risco_sup": "Baixo",
+   "limite_alto": 27.46,
+   "limite_atencao": 33.74,
+   "confianca": "boa",
+   "incerto": false
+  },
+  {
+   "horizonte": 3,
+   "mes": "2027-01",
+   "ear": 66.12,
+   "inf": 54.37,
+   "sup": 73.37,
+   "risco": "Baixo",
+   "risco_inf": "Baixo",
+   "risco_sup": "Baixo",
+   "limite_alto": 31.22,
+   "limite_atencao": 42.8,
+   "confianca": "boa",
+   "incerto": false
+  },
+  {
+   "horizonte": 4,
+   "mes": "2027-02",
+   "ear": 71.3,
+   "inf": 57.94,
+   "sup": 79.32,
+   "risco": "Baixo",
+   "risco_inf": "Baixo",
+   "risco_sup": "Baixo",
+   "limite_alto": 37.47,
+   "limite_atencao": 53.52,
+   "confianca": "moderada",
+   "incerto": false
+  },
+  {
+   "horizonte": 5,
+   "mes": "2027-03",
+   "ear": 72.19,
+   "inf": 55.96,
+   "sup": 77.99,
+   "risco": "Baixo",
+   "risco_inf": "Atenção",
+   "risco_sup": "Baixo",
+   "limite_alto": 41.63,
+   "limite_atencao": 60.41,
+   "confianca": "baixa",
+   "incerto": true
+  },
+  {
+   "horizonte": 6,
+   "mes": "2027-04",
+   "ear": 69.89,
+   "inf": 51.83,
+   "sup": 74.69,
+   "risco": "Baixo",
+   "risco_inf": "Atenção",
+   "risco_sup": "Baixo",
+   "limite_alto": 44.22,
+   "limite_atencao": 64.02,
+   "confianca": "baixa",
+   "incerto": true
+  }
+ ],
+ "avaliacao_teste": {
+  "rmse_pp": {
+   "1": 2.6,
+   "2": 5.64,
+   "3": 7.28,
+   "4": 8.68,
+   "5": 10.28,
+   "6": 11.36
+  },
+  "cobertura_intervalo": {
+   "1": 0.81,
+   "2": 0.741,
+   "3": 0.776,
+   "4": 0.672,
+   "5": 0.552,
+   "6": 0.517
+  }
+ },
+ "bandeira": {
+  "vigente": {
+   "mes": "2026-11",
+   "bandeira": "Verde",
+   "nome_aneel": "Verde",
+   "mes_anterior": "Verde"
+  },
+  "resumo_alerta": {
+   "modelo": "Random Forest | SIN + balanço + bandeira anterior",
+   "mudancas_acertadas": 3,
+   "mudancas_total": 12,
+   "alarmes_falsos": 6,
+   "meses_sem_mudanca": 46,
+   "persistencia_mudancas_acertadas": 0
+  },
+  "historico_alerta": [
+   {
+    "mes": "2025-11",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-12",
+    "real": "Amarela",
+    "anterior": "Vermelha",
+    "modelo": "Amarela",
+    "alerta": true,
+    "mudou": true,
+    "acertou": true
+   },
+   {
+    "mes": "2026-01",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2026-02",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-03",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-04",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-05",
+    "real": "Amarela",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2026-06",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2026-07",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-08",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2026-09",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-10",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   }
+  ],
+  "aviso": "O alerta de mudança é gerado quando os dados do mês fecham. A persistência da bandeira é o baseline difícil de bater: o modelo antecipa parte das mudanças, ao custo de alarmes falsos. Estimativa estatística, não substitui a decisão oficial da ANEEL.",
+  "historico_alerta_completo": [
+   {
+    "mes": "2022-01",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Amarela",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2022-02",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Amarela",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2022-03",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2022-04",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2022-05",
+    "real": "Verde",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2022-06",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-07",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-08",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-09",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-10",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-11",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2022-12",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-01",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-02",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-03",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-04",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-05",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-06",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-07",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-08",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-09",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-10",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-11",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2023-12",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-01",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-02",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-03",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-04",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-05",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-06",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-07",
+    "real": "Amarela",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2024-08",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": true,
+    "acertou": true
+   },
+   {
+    "mes": "2024-09",
+    "real": "Vermelha",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2024-10",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2024-11",
+    "real": "Amarela",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2024-12",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": true,
+    "acertou": true
+   },
+   {
+    "mes": "2025-01",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-02",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-03",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-04",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-05",
+    "real": "Amarela",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2025-06",
+    "real": "Vermelha",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2025-07",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-08",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-09",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-10",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-11",
+    "real": "Vermelha",
+    "anterior": "Vermelha",
+    "modelo": "Vermelha",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2025-12",
+    "real": "Amarela",
+    "anterior": "Vermelha",
+    "modelo": "Amarela",
+    "alerta": true,
+    "mudou": true,
+    "acertou": true
+   },
+   {
+    "mes": "2026-01",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2026-02",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-03",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-04",
+    "real": "Verde",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-05",
+    "real": "Amarela",
+    "anterior": "Verde",
+    "modelo": "Verde",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   },
+   {
+    "mes": "2026-06",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2026-07",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-08",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Verde",
+    "alerta": true,
+    "mudou": false,
+    "acertou": false
+   },
+   {
+    "mes": "2026-09",
+    "real": "Amarela",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": false,
+    "acertou": true
+   },
+   {
+    "mes": "2026-10",
+    "real": "Verde",
+    "anterior": "Amarela",
+    "modelo": "Amarela",
+    "alerta": false,
+    "mudou": true,
+    "acertou": false
+   }
+  ]
+ },
+ "versao_esquema": 2,
+ "subsistema": "SE",
+ "serie_ear": [
+  {
+   "mes": "2000-01",
+   "ear": 29.18
+  },
+  {
+   "mes": "2000-02",
+   "ear": 45.19
+  },
+  {
+   "mes": "2000-03",
+   "ear": 58.21
+  },
+  {
+   "mes": "2000-04",
+   "ear": 59.07
+  },
+  {
+   "mes": "2000-05",
+   "ear": 53.68
+  },
+  {
+   "mes": "2000-06",
+   "ear": 47.14
+  },
+  {
+   "mes": "2000-07",
+   "ear": 39.92
+  },
+  {
+   "mes": "2000-08",
+   "ear": 32.27
+  },
+  {
+   "mes": "2000-09",
+   "ear": 30.84
+  },
+  {
+   "mes": "2000-10",
+   "ear": 23.05
+  },
+  {
+   "mes": "2000-11",
+   "ear": 22.21
+  },
+  {
+   "mes": "2000-12",
+   "ear": 28.67
+  },
+  {
+   "mes": "2001-01",
+   "ear": 31.56
+  },
+  {
+   "mes": "2001-02",
+   "ear": 33.59
+  },
+  {
+   "mes": "2001-03",
+   "ear": 34.68
+  },
+  {
+   "mes": "2001-04",
+   "ear": 32.3
+  },
+  {
+   "mes": "2001-05",
+   "ear": 29.88
+  },
+  {
+   "mes": "2001-06",
+   "ear": 28.71
+  },
+  {
+   "mes": "2001-07",
+   "ear": 26.85
+  },
+  {
+   "mes": "2001-08",
+   "ear": 23.46
+  },
+  {
+   "mes": "2001-09",
+   "ear": 20.69
+  },
+  {
+   "mes": "2001-10",
+   "ear": 21.13
+  },
+  {
+   "mes": "2001-11",
+   "ear": 23.19
+  },
+  {
+   "mes": "2001-12",
+   "ear": 32.53
+  },
+  {
+   "mes": "2002-01",
+   "ear": 47.06
+  },
+  {
+   "mes": "2002-02",
+   "ear": 63.33
+  },
+  {
+   "mes": "2002-03",
+   "ear": 70.37
+  },
+  {
+   "mes": "2002-04",
+   "ear": 69.23
+  },
+  {
+   "mes": "2002-05",
+   "ear": 67.47
+  },
+  {
+   "mes": "2002-06",
+   "ear": 64.82
+  },
+  {
+   "mes": "2002-07",
+   "ear": 59.6
+  },
+  {
+   "mes": "2002-08",
+   "ear": 53.62
+  },
+  {
+   "mes": "2002-09",
+   "ear": 49.15
+  },
+  {
+   "mes": "2002-10",
+   "ear": 40.96
+  },
+  {
+   "mes": "2002-11",
+   "ear": 38.44
+  },
+  {
+   "mes": "2002-12",
+   "ear": 41.41
+  },
+  {
+   "mes": "2003-01",
+   "ear": 58.8
+  },
+  {
+   "mes": "2003-02",
+   "ear": 67.96
+  },
+  {
+   "mes": "2003-03",
+   "ear": 74.41
+  },
+  {
+   "mes": "2003-04",
+   "ear": 77.62
+  },
+  {
+   "mes": "2003-05",
+   "ear": 76.14
+  },
+  {
+   "mes": "2003-06",
+   "ear": 72.88
+  },
+  {
+   "mes": "2003-07",
+   "ear": 67.32
+  },
+  {
+   "mes": "2003-08",
+   "ear": 59.12
+  },
+  {
+   "mes": "2003-09",
+   "ear": 50.1
+  },
+  {
+   "mes": "2003-10",
+   "ear": 40.78
+  },
+  {
+   "mes": "2003-11",
+   "ear": 36.0
+  },
+  {
+   "mes": "2003-12",
+   "ear": 37.34
+  },
+  {
+   "mes": "2004-01",
+   "ear": 47.36
+  },
+  {
+   "mes": "2004-02",
+   "ear": 66.46
+  },
+  {
+   "mes": "2004-03",
+   "ear": 75.92
+  },
+  {
+   "mes": "2004-04",
+   "ear": 80.78
+  },
+  {
+   "mes": "2004-05",
+   "ear": 82.68
+  },
+  {
+   "mes": "2004-06",
+   "ear": 82.25
+  },
+  {
+   "mes": "2004-07",
+   "ear": 80.33
+  },
+  {
+   "mes": "2004-08",
+   "ear": 74.5
+  },
+  {
+   "mes": "2004-09",
+   "ear": 65.92
+  },
+  {
+   "mes": "2004-10",
+   "ear": 61.79
+  },
+  {
+   "mes": "2004-11",
+   "ear": 59.3
+  },
+  {
+   "mes": "2004-12",
+   "ear": 64.54
+  },
+  {
+   "mes": "2005-01",
+   "ear": 75.76
+  },
+  {
+   "mes": "2005-02",
+   "ear": 78.74
+  },
+  {
+   "mes": "2005-03",
+   "ear": 85.91
+  },
+  {
+   "mes": "2005-04",
+   "ear": 85.74
+  },
+  {
+   "mes": "2005-05",
+   "ear": 85.34
+  },
+  {
+   "mes": "2005-06",
+   "ear": 82.56
+  },
+  {
+   "mes": "2005-07",
+   "ear": 78.16
+  },
+  {
+   "mes": "2005-08",
+   "ear": 70.06
+  },
+  {
+   "mes": "2005-09",
+   "ear": 65.27
+  },
+  {
+   "mes": "2005-10",
+   "ear": 60.35
+  },
+  {
+   "mes": "2005-11",
+   "ear": 59.22
+  },
+  {
+   "mes": "2005-12",
+   "ear": 67.1
+  },
+  {
+   "mes": "2006-01",
+   "ear": 71.14
+  },
+  {
+   "mes": "2006-02",
+   "ear": 78.46
+  },
+  {
+   "mes": "2006-03",
+   "ear": 85.33
+  },
+  {
+   "mes": "2006-04",
+   "ear": 87.32
+  },
+  {
+   "mes": "2006-05",
+   "ear": 84.67
+  },
+  {
+   "mes": "2006-06",
+   "ear": 78.3
+  },
+  {
+   "mes": "2006-07",
+   "ear": 70.13
+  },
+  {
+   "mes": "2006-08",
+   "ear": 59.38
+  },
+  {
+   "mes": "2006-09",
+   "ear": 50.34
+  },
+  {
+   "mes": "2006-10",
+   "ear": 45.63
+  },
+  {
+   "mes": "2006-11",
+   "ear": 42.8
+  },
+  {
+   "mes": "2006-12",
+   "ear": 53.66
+  },
+  {
+   "mes": "2007-01",
+   "ear": 78.55
+  },
+  {
+   "mes": "2007-02",
+   "ear": 84.61
+  },
+  {
+   "mes": "2007-03",
+   "ear": 87.33
+  },
+  {
+   "mes": "2007-04",
+   "ear": 87.81
+  },
+  {
+   "mes": "2007-05",
+   "ear": 86.77
+  },
+  {
+   "mes": "2007-06",
+   "ear": 83.18
+  },
+  {
+   "mes": "2007-07",
+   "ear": 79.52
+  },
+  {
+   "mes": "2007-08",
+   "ear": 72.01
+  },
+  {
+   "mes": "2007-09",
+   "ear": 62.03
+  },
+  {
+   "mes": "2007-10",
+   "ear": 51.61
+  },
+  {
+   "mes": "2007-11",
+   "ear": 48.18
+  },
+  {
+   "mes": "2007-12",
+   "ear": 46.12
+  },
+  {
+   "mes": "2008-01",
+   "ear": 50.77
+  },
+  {
+   "mes": "2008-02",
+   "ear": 65.58
+  },
+  {
+   "mes": "2008-03",
+   "ear": 78.5
+  },
+  {
+   "mes": "2008-04",
+   "ear": 82.24
+  },
+  {
+   "mes": "2008-05",
+   "ear": 82.9
+  },
+  {
+   "mes": "2008-06",
+   "ear": 79.55
+  },
+  {
+   "mes": "2008-07",
+   "ear": 73.15
+  },
+  {
+   "mes": "2008-08",
+   "ear": 66.4
+  },
+  {
+   "mes": "2008-09",
+   "ear": 57.85
+  },
+  {
+   "mes": "2008-10",
+   "ear": 51.91
+  },
+  {
+   "mes": "2008-11",
+   "ear": 49.73
+  },
+  {
+   "mes": "2008-12",
+   "ear": 55.82
+  },
+  {
+   "mes": "2009-01",
+   "ear": 66.11
+  },
+  {
+   "mes": "2009-02",
+   "ear": 76.07
+  },
+  {
+   "mes": "2009-03",
+   "ear": 80.58
+  },
+  {
+   "mes": "2009-04",
+   "ear": 83.55
+  },
+  {
+   "mes": "2009-05",
+   "ear": 82.19
+  },
+  {
+   "mes": "2009-06",
+   "ear": 78.57
+  },
+  {
+   "mes": "2009-07",
+   "ear": 76.1
+  },
+  {
+   "mes": "2009-08",
+   "ear": 72.48
+  },
+  {
+   "mes": "2009-09",
+   "ear": 70.22
+  },
+  {
+   "mes": "2009-10",
+   "ear": 69.12
+  },
+  {
+   "mes": "2009-11",
+   "ear": 67.31
+  },
+  {
+   "mes": "2009-12",
+   "ear": 72.3
+  },
+  {
+   "mes": "2010-01",
+   "ear": 76.69
+  },
+  {
+   "mes": "2010-02",
+   "ear": 77.84
+  },
+  {
+   "mes": "2010-03",
+   "ear": 82.51
+  },
+  {
+   "mes": "2010-04",
+   "ear": 81.81
+  },
+  {
+   "mes": "2010-05",
+   "ear": 78.64
+  },
+  {
+   "mes": "2010-06",
+   "ear": 74.35
+  },
+  {
+   "mes": "2010-07",
+   "ear": 67.88
+  },
+  {
+   "mes": "2010-08",
+   "ear": 58.55
+  },
+  {
+   "mes": "2010-09",
+   "ear": 49.25
+  },
+  {
+   "mes": "2010-10",
+   "ear": 43.1
+  },
+  {
+   "mes": "2010-11",
+   "ear": 40.64
+  },
+  {
+   "mes": "2010-12",
+   "ear": 44.77
+  },
+  {
+   "mes": "2011-01",
+   "ear": 62.99
+  },
+  {
+   "mes": "2011-02",
+   "ear": 68.12
+  },
+  {
+   "mes": "2011-03",
+   "ear": 82.92
+  },
+  {
+   "mes": "2011-04",
+   "ear": 87.8
+  },
+  {
+   "mes": "2011-05",
+   "ear": 87.82
+  },
+  {
+   "mes": "2011-06",
+   "ear": 85.27
+  },
+  {
+   "mes": "2011-07",
+   "ear": 80.62
+  },
+  {
+   "mes": "2011-08",
+   "ear": 74.07
+  },
+  {
+   "mes": "2011-09",
+   "ear": 65.34
+  },
+  {
+   "mes": "2011-10",
+   "ear": 61.37
+  },
+  {
+   "mes": "2011-11",
+   "ear": 57.03
+  },
+  {
+   "mes": "2011-12",
+   "ear": 60.64
+  },
+  {
+   "mes": "2012-01",
+   "ear": 76.07
+  },
+  {
+   "mes": "2012-02",
+   "ear": 80.01
+  },
+  {
+   "mes": "2012-03",
+   "ear": 78.48
+  },
+  {
+   "mes": "2012-04",
+   "ear": 76.04
+  },
+  {
+   "mes": "2012-05",
+   "ear": 72.41
+  },
+  {
+   "mes": "2012-06",
+   "ear": 72.43
+  },
+  {
+   "mes": "2012-07",
+   "ear": 66.89
+  },
+  {
+   "mes": "2012-08",
+   "ear": 57.51
+  },
+  {
+   "mes": "2012-09",
+   "ear": 47.89
+  },
+  {
+   "mes": "2012-10",
+   "ear": 37.02
+  },
+  {
+   "mes": "2012-11",
+   "ear": 31.89
+  },
+  {
+   "mes": "2012-12",
+   "ear": 28.86
+  },
+  {
+   "mes": "2013-01",
+   "ear": 37.47
+  },
+  {
+   "mes": "2013-02",
+   "ear": 45.6
+  },
+  {
+   "mes": "2013-03",
+   "ear": 54.16
+  },
+  {
+   "mes": "2013-04",
+   "ear": 62.55
+  },
+  {
+   "mes": "2013-05",
+   "ear": 62.75
+  },
+  {
+   "mes": "2013-06",
+   "ear": 63.77
+  },
+  {
+   "mes": "2013-07",
+   "ear": 60.86
+  },
+  {
+   "mes": "2013-08",
+   "ear": 55.13
+  },
+  {
+   "mes": "2013-09",
+   "ear": 48.69
+  },
+  {
+   "mes": "2013-10",
+   "ear": 45.07
+  },
+  {
+   "mes": "2013-11",
+   "ear": 41.63
+  },
+  {
+   "mes": "2013-12",
+   "ear": 43.01
+  },
+  {
+   "mes": "2014-01",
+   "ear": 40.17
+  },
+  {
+   "mes": "2014-02",
+   "ear": 34.73
+  },
+  {
+   "mes": "2014-03",
+   "ear": 36.35
+  },
+  {
+   "mes": "2014-04",
+   "ear": 38.03
+  },
+  {
+   "mes": "2014-05",
+   "ear": 37.34
+  },
+  {
+   "mes": "2014-06",
+   "ear": 36.43
+  },
+  {
+   "mes": "2014-07",
+   "ear": 34.32
+  },
+  {
+   "mes": "2014-08",
+   "ear": 30.31
+  },
+  {
+   "mes": "2014-09",
+   "ear": 25.17
+  },
+  {
+   "mes": "2014-10",
+   "ear": 18.74
+  },
+  {
+   "mes": "2014-11",
+   "ear": 15.82
+  },
+  {
+   "mes": "2014-12",
+   "ear": 19.31
+  },
+  {
+   "mes": "2015-01",
+   "ear": 17.04
+  },
+  {
+   "mes": "2015-02",
+   "ear": 20.69
+  },
+  {
+   "mes": "2015-03",
+   "ear": 28.54
+  },
+  {
+   "mes": "2015-04",
+   "ear": 33.58
+  },
+  {
+   "mes": "2015-05",
+   "ear": 36.06
+  },
+  {
+   "mes": "2015-06",
+   "ear": 36.15
+  },
+  {
+   "mes": "2015-07",
+   "ear": 37.42
+  },
+  {
+   "mes": "2015-08",
+   "ear": 34.29
+  },
+  {
+   "mes": "2015-09",
+   "ear": 32.28
+  },
+  {
+   "mes": "2015-10",
+   "ear": 27.74
+  },
+  {
+   "mes": "2015-11",
+   "ear": 27.5
+  },
+  {
+   "mes": "2015-12",
+   "ear": 29.79
+  },
+  {
+   "mes": "2016-01",
+   "ear": 44.43
+  },
+  {
+   "mes": "2016-02",
+   "ear": 50.93
+  },
+  {
+   "mes": "2016-03",
+   "ear": 58.28
+  },
+  {
+   "mes": "2016-04",
+   "ear": 57.71
+  },
+  {
+   "mes": "2016-05",
+   "ear": 56.85
+  },
+  {
+   "mes": "2016-06",
+   "ear": 56.14
+  },
+  {
+   "mes": "2016-07",
+   "ear": 51.59
+  },
+  {
+   "mes": "2016-08",
+   "ear": 45.94
+  },
+  {
+   "mes": "2016-09",
+   "ear": 40.16
+  },
+  {
+   "mes": "2016-10",
+   "ear": 34.83
+  },
+  {
+   "mes": "2016-11",
+   "ear": 33.47
+  },
+  {
+   "mes": "2016-12",
+   "ear": 33.74
+  },
+  {
+   "mes": "2017-01",
+   "ear": 37.33
+  },
+  {
+   "mes": "2017-02",
+   "ear": 40.38
+  },
+  {
+   "mes": "2017-03",
+   "ear": 41.45
+  },
+  {
+   "mes": "2017-04",
+   "ear": 41.86
+  },
+  {
+   "mes": "2017-05",
+   "ear": 43.32
+  },
+  {
+   "mes": "2017-06",
+   "ear": 42.12
+  },
+  {
+   "mes": "2017-07",
+   "ear": 38.16
+  },
+  {
+   "mes": "2017-08",
+   "ear": 32.5
+  },
+  {
+   "mes": "2017-09",
+   "ear": 24.21
+  },
+  {
+   "mes": "2017-10",
+   "ear": 17.61
+  },
+  {
+   "mes": "2017-11",
+   "ear": 18.74
+  },
+  {
+   "mes": "2017-12",
+   "ear": 22.6
+  },
+  {
+   "mes": "2018-01",
+   "ear": 31.13
+  },
+  {
+   "mes": "2018-02",
+   "ear": 36.84
+  },
+  {
+   "mes": "2018-03",
+   "ear": 42.37
+  },
+  {
+   "mes": "2018-04",
+   "ear": 43.99
+  },
+  {
+   "mes": "2018-05",
+   "ear": 42.56
+  },
+  {
+   "mes": "2018-06",
+   "ear": 39.71
+  },
+  {
+   "mes": "2018-07",
+   "ear": 34.25
+  },
+  {
+   "mes": "2018-08",
+   "ear": 27.98
+  },
+  {
+   "mes": "2018-09",
+   "ear": 22.93
+  },
+  {
+   "mes": "2018-10",
+   "ear": 20.22
+  },
+  {
+   "mes": "2018-11",
+   "ear": 24.03
+  },
+  {
+   "mes": "2018-12",
+   "ear": 27.46
+  },
+  {
+   "mes": "2019-01",
+   "ear": 26.79
+  },
+  {
+   "mes": "2019-02",
+   "ear": 29.38
+  },
+  {
+   "mes": "2019-03",
+   "ear": 40.04
+  },
+  {
+   "mes": "2019-04",
+   "ear": 45.13
+  },
+  {
+   "mes": "2019-05",
+   "ear": 47.12
+  },
+  {
+   "mes": "2019-06",
+   "ear": 47.29
+  },
+  {
+   "mes": "2019-07",
+   "ear": 44.86
+  },
+  {
+   "mes": "2019-08",
+   "ear": 39.36
+  },
+  {
+   "mes": "2019-09",
+   "ear": 30.98
+  },
+  {
+   "mes": "2019-10",
+   "ear": 22.36
+  },
+  {
+   "mes": "2019-11",
+   "ear": 18.87
+  },
+  {
+   "mes": "2019-12",
+   "ear": 20.19
+  },
+  {
+   "mes": "2020-01",
+   "ear": 25.08
+  },
+  {
+   "mes": "2020-02",
+   "ear": 39.99
+  },
+  {
+   "mes": "2020-03",
+   "ear": 51.39
+  },
+  {
+   "mes": "2020-04",
+   "ear": 54.91
+  },
+  {
+   "mes": "2020-05",
+   "ear": 55.25
+  },
+  {
+   "mes": "2020-06",
+   "ear": 52.94
+  },
+  {
+   "mes": "2020-07",
+   "ear": 48.07
+  },
+  {
+   "mes": "2020-08",
+   "ear": 42.34
+  },
+  {
+   "mes": "2020-09",
+   "ear": 32.9
+  },
+  {
+   "mes": "2020-10",
+   "ear": 23.68
+  },
+  {
+   "mes": "2020-11",
+   "ear": 17.84
+  },
+  {
+   "mes": "2020-12",
+   "ear": 18.67
+  },
+  {
+   "mes": "2021-01",
+   "ear": 23.36
+  },
+  {
+   "mes": "2021-02",
+   "ear": 29.56
+  },
+  {
+   "mes": "2021-03",
+   "ear": 35.26
+  },
+  {
+   "mes": "2021-04",
+   "ear": 34.7
+  },
+  {
+   "mes": "2021-05",
+   "ear": 32.1
+  },
+  {
+   "mes": "2021-06",
+   "ear": 29.09
+  },
+  {
+   "mes": "2021-07",
+   "ear": 26.03
+  },
+  {
+   "mes": "2021-08",
+   "ear": 21.28
+  },
+  {
+   "mes": "2021-09",
+   "ear": 16.75
+  },
+  {
+   "mes": "2021-10",
+   "ear": 18.24
+  },
+  {
+   "mes": "2021-11",
+   "ear": 19.68
+  },
+  {
+   "mes": "2021-12",
+   "ear": 25.68
+  },
+  {
+   "mes": "2022-01",
+   "ear": 41.71
+  },
+  {
+   "mes": "2022-02",
+   "ear": 58.11
+  },
+  {
+   "mes": "2022-03",
+   "ear": 63.6
+  },
+  {
+   "mes": "2022-04",
+   "ear": 66.55
+  },
+  {
+   "mes": "2022-05",
+   "ear": 66.42
+  },
+  {
+   "mes": "2022-06",
+   "ear": 65.52
+  },
+  {
+   "mes": "2022-07",
+   "ear": 61.56
+  },
+  {
+   "mes": "2022-08",
+   "ear": 56.02
+  },
+  {
+   "mes": "2022-09",
+   "ear": 51.11
+  },
+  {
+   "mes": "2022-10",
+   "ear": 49.6
+  },
+  {
+   "mes": "2022-11",
+   "ear": 46.49
+  },
+  {
+   "mes": "2022-12",
+   "ear": 53.01
+  },
+  {
+   "mes": "2023-01",
+   "ear": 69.81
+  },
+  {
+   "mes": "2023-02",
+   "ear": 76.96
+  },
+  {
+   "mes": "2023-03",
+   "ear": 83.15
+  },
+  {
+   "mes": "2023-04",
+   "ear": 86.21
+  },
+  {
+   "mes": "2023-05",
+   "ear": 86.24
+  },
+  {
+   "mes": "2023-06",
+   "ear": 86.36
+  },
+  {
+   "mes": "2023-07",
+   "ear": 84.28
+  },
+  {
+   "mes": "2023-08",
+   "ear": 78.8
+  },
+  {
+   "mes": "2023-09",
+   "ear": 72.33
+  },
+  {
+   "mes": "2023-10",
+   "ear": 68.68
+  },
+  {
+   "mes": "2023-11",
+   "ear": 64.01
+  },
+  {
+   "mes": "2023-12",
+   "ear": 60.72
+  },
+  {
+   "mes": "2024-01",
+   "ear": 61.1
+  },
+  {
+   "mes": "2024-02",
+   "ear": 64.53
+  },
+  {
+   "mes": "2024-03",
+   "ear": 69.46
+  },
+  {
+   "mes": "2024-04",
+   "ear": 72.91
+  },
+  {
+   "mes": "2024-05",
+   "ear": 71.35
+  },
+  {
+   "mes": "2024-06",
+   "ear": 67.59
+  },
+  {
+   "mes": "2024-07",
+   "ear": 62.55
+  },
+  {
+   "mes": "2024-08",
+   "ear": 55.74
+  },
+  {
+   "mes": "2024-09",
+   "ear": 46.52
+  },
+  {
+   "mes": "2024-10",
+   "ear": 40.35
+  },
+  {
+   "mes": "2024-11",
+   "ear": 42.65
+  },
+  {
+   "mes": "2024-12",
+   "ear": 50.97
+  },
+  {
+   "mes": "2025-01",
+   "ear": 62.03
+  },
+  {
+   "mes": "2025-02",
+   "ear": 68.75
+  },
+  {
+   "mes": "2025-03",
+   "ear": 68.45
+  },
+  {
+   "mes": "2025-04",
+   "ear": 70.15
+  },
+  {
+   "mes": "2025-05",
+   "ear": 68.42
+  },
+  {
+   "mes": "2025-06",
+   "ear": 66.47
+  },
+  {
+   "mes": "2025-07",
+   "ear": 63.05
+  },
+  {
+   "mes": "2025-08",
+   "ear": 57.72
+  },
+  {
+   "mes": "2025-09",
+   "ear": 50.27
+  },
+  {
+   "mes": "2025-10",
+   "ear": 44.31
+  },
+  {
+   "mes": "2025-11",
+   "ear": 41.6
+  },
+  {
+   "mes": "2025-12",
+   "ear": 42.13
+  },
+  {
+   "mes": "2026-01",
+   "ear": 47.5
+  },
+  {
+   "mes": "2026-02",
+   "ear": 57.4
+  },
+  {
+   "mes": "2026-03",
+   "ear": 65.38
+  },
+  {
+   "mes": "2026-04",
+   "ear": 66.21
+  },
+  {
+   "mes": "2026-05",
+   "ear": 66.19
+  },
+  {
+   "mes": "2026-06",
+   "ear": 65.55
+  },
+  {
+   "mes": "2026-07",
+   "ear": 62.96
+  },
+  {
+   "mes": "2026-08",
+   "ear": 57.98
+  },
+  {
+   "mes": "2026-09",
+   "ear": 56.43
+  },
+  {
+   "mes": "2026-10",
+   "ear": 54.92
+  }
+ ],
+ "backtest": {
+  "modelos": {
+   "gb": "Gradient Boosting (sem ENA futura)",
+   "sazonal": "Persistência + variação sazonal",
+   "persistencia": "Persistência"
+  },
+  "origens": [
+   {
+    "origem": "2021-07",
+    "ear_origem": 26.03,
+    "previsoes": [
+     {
+      "horizonte": 6,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 35.31,
+      "inf": 17.24,
+      "sup": 40.1,
+      "sazonal": 16.93,
+      "persistencia": 26.03
+     }
+    ]
+   },
+   {
+    "origem": "2021-08",
+    "ear_origem": 21.28,
+    "previsoes": [
+     {
+      "horizonte": 5,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 30.79,
+      "inf": 14.56,
+      "sup": 36.59,
+      "sazonal": 18.54,
+      "persistencia": 21.28
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 40.85,
+      "inf": 22.79,
+      "sup": 45.65,
+      "sazonal": 25.6,
+      "persistencia": 21.28
+     }
+    ]
+   },
+   {
+    "origem": "2021-09",
+    "ear_origem": 16.75,
+    "previsoes": [
+     {
+      "horizonte": 4,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 26.52,
+      "inf": 13.16,
+      "sup": 34.54,
+      "sazonal": 20.89,
+      "persistencia": 16.75
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 30.54,
+      "inf": 14.32,
+      "sup": 36.35,
+      "sazonal": 27.95,
+      "persistencia": 16.75
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 34.16,
+      "inf": 16.09,
+      "sup": 38.96,
+      "sazonal": 34.69,
+      "persistencia": 16.75
+     }
+    ]
+   },
+   {
+    "origem": "2021-10",
+    "ear_origem": 18.24,
+    "previsoes": [
+     {
+      "horizonte": 3,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 35.45,
+      "inf": 23.7,
+      "sup": 42.7,
+      "sazonal": 28.19,
+      "persistencia": 18.24
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 47.17,
+      "inf": 33.8,
+      "sup": 55.18,
+      "sazonal": 35.25,
+      "persistencia": 18.24
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 49.09,
+      "inf": 32.87,
+      "sup": 54.9,
+      "sazonal": 41.99,
+      "persistencia": 18.24
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 49.4,
+      "inf": 31.34,
+      "sup": 54.2,
+      "sazonal": 44.11,
+      "persistencia": 18.24
+     }
+    ]
+   },
+   {
+    "origem": "2021-11",
+    "ear_origem": 19.68,
+    "previsoes": [
+     {
+      "horizonte": 2,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 29.75,
+      "inf": 23.31,
+      "sup": 34.14,
+      "sazonal": 31.81,
+      "persistencia": 19.68
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 39.09,
+      "inf": 27.34,
+      "sup": 46.34,
+      "sazonal": 38.87,
+      "persistencia": 19.68
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 41.79,
+      "inf": 28.43,
+      "sup": 49.81,
+      "sazonal": 45.61,
+      "persistencia": 19.68
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 43.67,
+      "inf": 27.45,
+      "sup": 49.48,
+      "sazonal": 47.72,
+      "persistencia": 19.68
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 46.68,
+      "inf": 28.61,
+      "sup": 51.47,
+      "sazonal": 47.12,
+      "persistencia": 19.68
+     }
+    ]
+   },
+   {
+    "origem": "2021-12",
+    "ear_origem": 25.68,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-01",
+      "real": 41.71,
+      "gb": 33.33,
+      "inf": 29.39,
+      "sup": 36.37,
+      "sazonal": 34.39,
+      "persistencia": 25.68
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 39.41,
+      "inf": 32.97,
+      "sup": 43.8,
+      "sazonal": 41.45,
+      "persistencia": 25.68
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 44.53,
+      "inf": 32.79,
+      "sup": 51.79,
+      "sazonal": 48.19,
+      "persistencia": 25.68
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 47.81,
+      "inf": 34.45,
+      "sup": 55.83,
+      "sazonal": 50.31,
+      "persistencia": 25.68
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 49.28,
+      "inf": 33.05,
+      "sup": 55.08,
+      "sazonal": 49.71,
+      "persistencia": 25.68
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 40.57,
+      "inf": 22.51,
+      "sup": 45.37,
+      "sazonal": 47.58,
+      "persistencia": 25.68
+     }
+    ]
+   },
+   {
+    "origem": "2022-01",
+    "ear_origem": 41.71,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-02",
+      "real": 58.11,
+      "gb": 51.86,
+      "inf": 47.91,
+      "sup": 54.89,
+      "sazonal": 48.53,
+      "persistencia": 41.71
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 56.82,
+      "inf": 50.39,
+      "sup": 61.22,
+      "sazonal": 55.0,
+      "persistencia": 41.71
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 59.26,
+      "inf": 47.51,
+      "sup": 66.51,
+      "sazonal": 56.91,
+      "persistencia": 41.71
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 54.0,
+      "inf": 40.64,
+      "sup": 62.01,
+      "sazonal": 56.22,
+      "persistencia": 41.71
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 53.14,
+      "inf": 36.92,
+      "sup": 58.95,
+      "sazonal": 54.14,
+      "persistencia": 41.71
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 48.13,
+      "inf": 30.06,
+      "sup": 52.92,
+      "sazonal": 50.12,
+      "persistencia": 41.71
+     }
+    ]
+   },
+   {
+    "origem": "2022-02",
+    "ear_origem": 58.11,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-03",
+      "real": 63.6,
+      "gb": 66.77,
+      "inf": 62.83,
+      "sup": 69.8,
+      "sazonal": 64.58,
+      "persistencia": 58.11
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 70.57,
+      "inf": 64.14,
+      "sup": 74.97,
+      "sazonal": 66.48,
+      "persistencia": 58.11
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 68.82,
+      "inf": 57.07,
+      "sup": 76.08,
+      "sazonal": 65.79,
+      "persistencia": 58.11
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 65.76,
+      "inf": 52.4,
+      "sup": 73.78,
+      "sazonal": 63.71,
+      "persistencia": 58.11
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 62.25,
+      "inf": 46.03,
+      "sup": 68.06,
+      "sazonal": 59.69,
+      "persistencia": 58.11
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 58.27,
+      "inf": 40.21,
+      "sup": 63.07,
+      "sazonal": 53.41,
+      "persistencia": 58.11
+     }
+    ]
+   },
+   {
+    "origem": "2022-03",
+    "ear_origem": 63.6,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-04",
+      "real": 66.55,
+      "gb": 64.85,
+      "inf": 60.9,
+      "sup": 67.88,
+      "sazonal": 65.5,
+      "persistencia": 63.6
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 64.23,
+      "inf": 57.79,
+      "sup": 68.62,
+      "sazonal": 64.81,
+      "persistencia": 63.6
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 61.93,
+      "inf": 50.18,
+      "sup": 69.18,
+      "sazonal": 62.73,
+      "persistencia": 63.6
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 59.22,
+      "inf": 45.86,
+      "sup": 67.24,
+      "sazonal": 58.71,
+      "persistencia": 63.6
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 52.01,
+      "inf": 35.78,
+      "sup": 57.81,
+      "sazonal": 52.43,
+      "persistencia": 63.6
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 45.75,
+      "inf": 27.69,
+      "sup": 50.55,
+      "sazonal": 45.66,
+      "persistencia": 63.6
+     }
+    ]
+   },
+   {
+    "origem": "2022-04",
+    "ear_origem": 66.55,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-05",
+      "real": 66.42,
+      "gb": 67.43,
+      "inf": 63.48,
+      "sup": 70.46,
+      "sazonal": 65.86,
+      "persistencia": 66.55
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 64.3,
+      "inf": 57.87,
+      "sup": 68.7,
+      "sazonal": 63.78,
+      "persistencia": 66.55
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 59.38,
+      "inf": 47.63,
+      "sup": 66.63,
+      "sazonal": 59.76,
+      "persistencia": 66.55
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 54.69,
+      "inf": 41.33,
+      "sup": 62.71,
+      "sazonal": 53.48,
+      "persistencia": 66.55
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 47.0,
+      "inf": 30.78,
+      "sup": 52.81,
+      "sazonal": 46.71,
+      "persistencia": 66.55
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 42.33,
+      "inf": 24.26,
+      "sup": 47.12,
+      "sazonal": 41.24,
+      "persistencia": 66.55
+     }
+    ]
+   },
+   {
+    "origem": "2022-05",
+    "ear_origem": 66.42,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-06",
+      "real": 65.52,
+      "gb": 64.76,
+      "inf": 60.81,
+      "sup": 67.79,
+      "sazonal": 64.33,
+      "persistencia": 66.42
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 59.92,
+      "inf": 53.48,
+      "sup": 64.31,
+      "sazonal": 60.31,
+      "persistencia": 66.42
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 53.32,
+      "inf": 41.58,
+      "sup": 60.58,
+      "sazonal": 54.04,
+      "persistencia": 66.42
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 48.79,
+      "inf": 35.43,
+      "sup": 56.81,
+      "sazonal": 47.27,
+      "persistencia": 66.42
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 43.43,
+      "inf": 27.21,
+      "sup": 49.24,
+      "sazonal": 41.8,
+      "persistencia": 66.42
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 40.25,
+      "inf": 22.18,
+      "sup": 45.04,
+      "sazonal": 39.8,
+      "persistencia": 66.42
+     }
+    ]
+   },
+   {
+    "origem": "2022-06",
+    "ear_origem": 65.52,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-07",
+      "real": 61.56,
+      "gb": 61.82,
+      "inf": 57.88,
+      "sup": 64.85,
+      "sazonal": 61.5,
+      "persistencia": 65.52
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 56.03,
+      "inf": 49.59,
+      "sup": 60.42,
+      "sazonal": 55.22,
+      "persistencia": 65.52
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 51.65,
+      "inf": 39.91,
+      "sup": 58.91,
+      "sazonal": 48.45,
+      "persistencia": 65.52
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 47.27,
+      "inf": 33.9,
+      "sup": 55.28,
+      "sazonal": 42.98,
+      "persistencia": 65.52
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 42.32,
+      "inf": 26.1,
+      "sup": 48.13,
+      "sazonal": 40.98,
+      "persistencia": 65.52
+     },
+     {
+      "horizonte": 6,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 43.74,
+      "inf": 25.67,
+      "sup": 48.54,
+      "sazonal": 44.52,
+      "persistencia": 65.52
+     }
+    ]
+   },
+   {
+    "origem": "2022-07",
+    "ear_origem": 61.56,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-08",
+      "real": 56.02,
+      "gb": 56.18,
+      "inf": 52.24,
+      "sup": 59.22,
+      "sazonal": 55.28,
+      "persistencia": 61.56
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 48.46,
+      "inf": 42.03,
+      "sup": 52.85,
+      "sazonal": 48.51,
+      "persistencia": 61.56
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 44.11,
+      "inf": 32.36,
+      "sup": 51.37,
+      "sazonal": 43.04,
+      "persistencia": 61.56
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 40.73,
+      "inf": 27.37,
+      "sup": 48.75,
+      "sazonal": 41.05,
+      "persistencia": 61.56
+     },
+     {
+      "horizonte": 5,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 41.68,
+      "inf": 25.45,
+      "sup": 47.48,
+      "sazonal": 44.58,
+      "persistencia": 61.56
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 49.73,
+      "inf": 31.66,
+      "sup": 54.53,
+      "sazonal": 53.64,
+      "persistencia": 61.56
+     }
+    ]
+   },
+   {
+    "origem": "2022-08",
+    "ear_origem": 56.02,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-09",
+      "real": 51.11,
+      "gb": 49.59,
+      "inf": 45.65,
+      "sup": 52.63,
+      "sazonal": 49.25,
+      "persistencia": 56.02
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 43.0,
+      "inf": 36.56,
+      "sup": 47.39,
+      "sazonal": 43.78,
+      "persistencia": 56.02
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 42.03,
+      "inf": 30.28,
+      "sup": 49.29,
+      "sazonal": 41.78,
+      "persistencia": 56.02
+     },
+     {
+      "horizonte": 4,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 44.78,
+      "inf": 31.42,
+      "sup": 52.79,
+      "sazonal": 45.32,
+      "persistencia": 56.02
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 51.77,
+      "inf": 35.55,
+      "sup": 57.58,
+      "sazonal": 54.38,
+      "persistencia": 56.02
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 57.39,
+      "inf": 39.32,
+      "sup": 62.19,
+      "sazonal": 61.88,
+      "persistencia": 56.02
+     }
+    ]
+   },
+   {
+    "origem": "2022-09",
+    "ear_origem": 51.11,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-10",
+      "real": 49.6,
+      "gb": 46.46,
+      "inf": 42.51,
+      "sup": 49.49,
+      "sazonal": 45.65,
+      "persistencia": 51.11
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 43.78,
+      "inf": 37.35,
+      "sup": 48.18,
+      "sazonal": 43.65,
+      "persistencia": 51.11
+     },
+     {
+      "horizonte": 3,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 46.48,
+      "inf": 34.73,
+      "sup": 53.73,
+      "sazonal": 47.18,
+      "persistencia": 51.11
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 56.6,
+      "inf": 43.23,
+      "sup": 64.61,
+      "sazonal": 56.24,
+      "persistencia": 51.11
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 61.09,
+      "inf": 44.87,
+      "sup": 66.9,
+      "sazonal": 63.75,
+      "persistencia": 51.11
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 61.31,
+      "inf": 43.24,
+      "sup": 66.1,
+      "sazonal": 70.43,
+      "persistencia": 51.11
+     }
+    ]
+   },
+   {
+    "origem": "2022-10",
+    "ear_origem": 49.6,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-11",
+      "real": 46.49,
+      "gb": 49.24,
+      "inf": 45.3,
+      "sup": 52.28,
+      "sazonal": 47.6,
+      "persistencia": 49.6
+     },
+     {
+      "horizonte": 2,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 51.97,
+      "inf": 45.54,
+      "sup": 56.37,
+      "sazonal": 51.14,
+      "persistencia": 49.6
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 61.04,
+      "inf": 49.29,
+      "sup": 68.29,
+      "sazonal": 60.2,
+      "persistencia": 49.6
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 68.74,
+      "inf": 55.38,
+      "sup": 76.76,
+      "sazonal": 67.7,
+      "persistencia": 49.6
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 73.19,
+      "inf": 56.97,
+      "sup": 79.0,
+      "sazonal": 74.38,
+      "persistencia": 49.6
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 68.98,
+      "inf": 50.91,
+      "sup": 73.77,
+      "sazonal": 76.54,
+      "persistencia": 49.6
+     }
+    ]
+   },
+   {
+    "origem": "2022-11",
+    "ear_origem": 46.49,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2022-12",
+      "real": 53.01,
+      "gb": 49.77,
+      "inf": 45.83,
+      "sup": 52.81,
+      "sazonal": 50.02,
+      "persistencia": 46.49
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 53.97,
+      "inf": 47.54,
+      "sup": 58.36,
+      "sazonal": 59.08,
+      "persistencia": 46.49
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 59.9,
+      "inf": 48.15,
+      "sup": 67.16,
+      "sazonal": 66.59,
+      "persistencia": 46.49
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 66.92,
+      "inf": 53.55,
+      "sup": 74.93,
+      "sazonal": 73.27,
+      "persistencia": 46.49
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 65.06,
+      "inf": 48.84,
+      "sup": 70.87,
+      "sazonal": 75.42,
+      "persistencia": 46.49
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 65.48,
+      "inf": 47.41,
+      "sup": 70.27,
+      "sazonal": 74.84,
+      "persistencia": 46.49
+     }
+    ]
+   },
+   {
+    "origem": "2022-12",
+    "ear_origem": 53.01,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-01",
+      "real": 69.81,
+      "gb": 63.89,
+      "inf": 59.94,
+      "sup": 66.92,
+      "sazonal": 62.07,
+      "persistencia": 53.01
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 69.97,
+      "inf": 63.53,
+      "sup": 74.36,
+      "sazonal": 69.58,
+      "persistencia": 53.01
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 75.25,
+      "inf": 63.51,
+      "sup": 82.51,
+      "sazonal": 76.26,
+      "persistencia": 53.01
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 75.49,
+      "inf": 62.13,
+      "sup": 83.51,
+      "sazonal": 78.41,
+      "persistencia": 53.01
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 74.81,
+      "inf": 58.58,
+      "sup": 80.61,
+      "sazonal": 77.83,
+      "persistencia": 53.01
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 71.58,
+      "inf": 53.51,
+      "sup": 76.38,
+      "sazonal": 75.76,
+      "persistencia": 53.01
+     }
+    ]
+   },
+   {
+    "origem": "2023-01",
+    "ear_origem": 69.81,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-02",
+      "real": 76.96,
+      "gb": 76.6,
+      "inf": 72.66,
+      "sup": 79.64,
+      "sazonal": 77.06,
+      "persistencia": 69.81
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 82.67,
+      "inf": 76.24,
+      "sup": 87.07,
+      "sazonal": 83.49,
+      "persistencia": 69.81
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 82.6,
+      "inf": 70.85,
+      "sup": 89.86,
+      "sazonal": 85.44,
+      "persistencia": 69.81
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 80.78,
+      "inf": 67.42,
+      "sup": 88.8,
+      "sazonal": 84.77,
+      "persistencia": 69.81
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 77.84,
+      "inf": 61.62,
+      "sup": 83.65,
+      "sazonal": 82.75,
+      "persistencia": 69.81
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 74.58,
+      "inf": 56.52,
+      "sup": 79.38,
+      "sazonal": 78.73,
+      "persistencia": 69.81
+     }
+    ]
+   },
+   {
+    "origem": "2023-02",
+    "ear_origem": 76.96,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-03",
+      "real": 83.15,
+      "gb": 82.98,
+      "inf": 79.04,
+      "sup": 86.02,
+      "sazonal": 83.38,
+      "persistencia": 76.96
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 81.99,
+      "inf": 75.56,
+      "sup": 86.39,
+      "sazonal": 85.33,
+      "persistencia": 76.96
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 79.94,
+      "inf": 68.19,
+      "sup": 87.2,
+      "sazonal": 84.67,
+      "persistencia": 76.96
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 77.06,
+      "inf": 63.7,
+      "sup": 85.08,
+      "sazonal": 82.64,
+      "persistencia": 76.96
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 71.12,
+      "inf": 54.89,
+      "sup": 76.92,
+      "sazonal": 78.62,
+      "persistencia": 76.96
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 62.84,
+      "inf": 44.77,
+      "sup": 67.63,
+      "sazonal": 72.38,
+      "persistencia": 76.96
+     }
+    ]
+   },
+   {
+    "origem": "2023-03",
+    "ear_origem": 83.15,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-04",
+      "real": 86.21,
+      "gb": 84.55,
+      "inf": 80.61,
+      "sup": 87.58,
+      "sazonal": 85.1,
+      "persistencia": 83.15
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 82.19,
+      "inf": 75.76,
+      "sup": 86.59,
+      "sazonal": 84.44,
+      "persistencia": 83.15
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 80.89,
+      "inf": 69.14,
+      "sup": 88.15,
+      "sazonal": 82.41,
+      "persistencia": 83.15
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 74.05,
+      "inf": 60.69,
+      "sup": 82.07,
+      "sazonal": 78.39,
+      "persistencia": 83.15
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 67.01,
+      "inf": 50.79,
+      "sup": 72.82,
+      "sazonal": 72.15,
+      "persistencia": 83.15
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 60.68,
+      "inf": 42.62,
+      "sup": 65.48,
+      "sazonal": 65.46,
+      "persistencia": 83.15
+     }
+    ]
+   },
+   {
+    "origem": "2023-04",
+    "ear_origem": 86.21,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-05",
+      "real": 86.24,
+      "gb": 86.23,
+      "inf": 82.29,
+      "sup": 89.26,
+      "sazonal": 85.55,
+      "persistencia": 86.21
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 82.63,
+      "inf": 76.19,
+      "sup": 87.02,
+      "sazonal": 83.52,
+      "persistencia": 86.21
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 79.14,
+      "inf": 67.39,
+      "sup": 86.39,
+      "sazonal": 79.5,
+      "persistencia": 86.21
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 72.47,
+      "inf": 59.1,
+      "sup": 80.48,
+      "sazonal": 73.26,
+      "persistencia": 86.21
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 65.46,
+      "inf": 49.24,
+      "sup": 71.27,
+      "sazonal": 66.57,
+      "persistencia": 86.21
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 57.86,
+      "inf": 39.8,
+      "sup": 62.66,
+      "sazonal": 61.28,
+      "persistencia": 86.21
+     }
+    ]
+   },
+   {
+    "origem": "2023-05",
+    "ear_origem": 86.24,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-06",
+      "real": 86.36,
+      "gb": 84.47,
+      "inf": 80.52,
+      "sup": 87.5,
+      "sazonal": 84.21,
+      "persistencia": 86.24
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 79.64,
+      "inf": 73.2,
+      "sup": 84.03,
+      "sazonal": 80.19,
+      "persistencia": 86.24
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 73.45,
+      "inf": 61.7,
+      "sup": 80.7,
+      "sazonal": 73.95,
+      "persistencia": 86.24
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 69.06,
+      "inf": 55.69,
+      "sup": 77.07,
+      "sazonal": 67.26,
+      "persistencia": 86.24
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 61.6,
+      "inf": 45.38,
+      "sup": 67.41,
+      "sazonal": 61.97,
+      "persistencia": 86.24
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 59.12,
+      "inf": 41.06,
+      "sup": 63.92,
+      "sazonal": 59.92,
+      "persistencia": 86.24
+     }
+    ]
+   },
+   {
+    "origem": "2023-06",
+    "ear_origem": 86.36,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-07",
+      "real": 84.28,
+      "gb": 83.54,
+      "inf": 79.59,
+      "sup": 86.57,
+      "sazonal": 82.35,
+      "persistencia": 86.36
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 77.22,
+      "inf": 70.78,
+      "sup": 81.61,
+      "sazonal": 76.11,
+      "persistencia": 86.36
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 71.6,
+      "inf": 59.86,
+      "sup": 78.86,
+      "sazonal": 69.42,
+      "persistencia": 86.36
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 65.48,
+      "inf": 52.12,
+      "sup": 73.5,
+      "sazonal": 64.13,
+      "persistencia": 86.36
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 60.65,
+      "inf": 44.43,
+      "sup": 66.46,
+      "sazonal": 62.08,
+      "persistencia": 86.36
+     },
+     {
+      "horizonte": 6,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 58.48,
+      "inf": 40.41,
+      "sup": 63.28,
+      "sazonal": 65.75,
+      "persistencia": 86.36
+     }
+    ]
+   },
+   {
+    "origem": "2023-07",
+    "ear_origem": 84.28,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-08",
+      "real": 78.8,
+      "gb": 79.89,
+      "inf": 75.95,
+      "sup": 82.93,
+      "sazonal": 78.04,
+      "persistencia": 84.28
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 74.39,
+      "inf": 67.96,
+      "sup": 78.78,
+      "sazonal": 71.35,
+      "persistencia": 84.28
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 70.71,
+      "inf": 58.96,
+      "sup": 77.96,
+      "sazonal": 66.06,
+      "persistencia": 84.28
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 62.96,
+      "inf": 49.6,
+      "sup": 70.98,
+      "sazonal": 64.01,
+      "persistencia": 84.28
+     },
+     {
+      "horizonte": 5,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 66.98,
+      "inf": 50.76,
+      "sup": 72.79,
+      "sazonal": 67.68,
+      "persistencia": 84.28
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 73.38,
+      "inf": 55.31,
+      "sup": 78.17,
+      "sazonal": 77.1,
+      "persistencia": 84.28
+     }
+    ]
+   },
+   {
+    "origem": "2023-08",
+    "ear_origem": 78.8,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-09",
+      "real": 72.33,
+      "gb": 72.48,
+      "inf": 68.53,
+      "sup": 75.51,
+      "sazonal": 72.12,
+      "persistencia": 78.8
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 66.87,
+      "inf": 60.43,
+      "sup": 71.26,
+      "sazonal": 66.83,
+      "persistencia": 78.8
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 63.69,
+      "inf": 51.94,
+      "sup": 70.94,
+      "sazonal": 64.78,
+      "persistencia": 78.8
+     },
+     {
+      "horizonte": 4,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 65.35,
+      "inf": 51.99,
+      "sup": 73.37,
+      "sazonal": 68.45,
+      "persistencia": 78.8
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 74.4,
+      "inf": 58.18,
+      "sup": 80.21,
+      "sazonal": 77.86,
+      "persistencia": 78.8
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 75.16,
+      "inf": 57.09,
+      "sup": 79.95,
+      "sazonal": 85.35,
+      "persistencia": 78.8
+     }
+    ]
+   },
+   {
+    "origem": "2023-09",
+    "ear_origem": 72.33,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-10",
+      "real": 68.68,
+      "gb": 65.39,
+      "inf": 61.45,
+      "sup": 68.43,
+      "sazonal": 67.04,
+      "persistencia": 72.33
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 63.73,
+      "inf": 57.3,
+      "sup": 68.13,
+      "sazonal": 64.99,
+      "persistencia": 72.33
+     },
+     {
+      "horizonte": 3,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 64.87,
+      "inf": 53.12,
+      "sup": 72.12,
+      "sazonal": 68.67,
+      "persistencia": 72.33
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 74.75,
+      "inf": 61.38,
+      "sup": 82.76,
+      "sazonal": 78.08,
+      "persistencia": 72.33
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 80.77,
+      "inf": 64.55,
+      "sup": 86.58,
+      "sazonal": 85.57,
+      "persistencia": 72.33
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 79.69,
+      "inf": 61.62,
+      "sup": 84.48,
+      "sazonal": 92.22,
+      "persistencia": 72.33
+     }
+    ]
+   },
+   {
+    "origem": "2023-10",
+    "ear_origem": 68.68,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-11",
+      "real": 64.01,
+      "gb": 66.47,
+      "inf": 62.52,
+      "sup": 69.5,
+      "sazonal": 66.63,
+      "persistencia": 68.68
+     },
+     {
+      "horizonte": 2,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 69.43,
+      "inf": 62.99,
+      "sup": 73.82,
+      "sazonal": 70.3,
+      "persistencia": 68.68
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 79.44,
+      "inf": 67.69,
+      "sup": 86.7,
+      "sazonal": 79.72,
+      "persistencia": 68.68
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 84.73,
+      "inf": 71.37,
+      "sup": 92.75,
+      "sazonal": 87.2,
+      "persistencia": 68.68
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 87.44,
+      "inf": 71.22,
+      "sup": 93.25,
+      "sazonal": 93.86,
+      "persistencia": 68.68
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 91.77,
+      "inf": 73.71,
+      "sup": 96.57,
+      "sazonal": 96.06,
+      "persistencia": 68.68
+     }
+    ]
+   },
+   {
+    "origem": "2023-11",
+    "ear_origem": 64.01,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2023-12",
+      "real": 60.72,
+      "gb": 66.02,
+      "inf": 62.08,
+      "sup": 69.05,
+      "sazonal": 67.68,
+      "persistencia": 64.01
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 74.92,
+      "inf": 68.49,
+      "sup": 79.31,
+      "sazonal": 77.09,
+      "persistencia": 64.01
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 78.52,
+      "inf": 66.77,
+      "sup": 85.77,
+      "sazonal": 84.58,
+      "persistencia": 64.01
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 83.21,
+      "inf": 69.84,
+      "sup": 91.22,
+      "sazonal": 91.23,
+      "persistencia": 64.01
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 82.17,
+      "inf": 65.95,
+      "sup": 87.98,
+      "sazonal": 93.43,
+      "persistencia": 64.01
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 83.48,
+      "inf": 65.41,
+      "sup": 88.28,
+      "sazonal": 92.88,
+      "persistencia": 64.01
+     }
+    ]
+   },
+   {
+    "origem": "2023-12",
+    "ear_origem": 60.72,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-01",
+      "real": 61.1,
+      "gb": 62.87,
+      "inf": 58.93,
+      "sup": 65.9,
+      "sazonal": 70.13,
+      "persistencia": 60.72
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 67.24,
+      "inf": 60.8,
+      "sup": 71.63,
+      "sazonal": 77.62,
+      "persistencia": 60.72
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 74.7,
+      "inf": 62.95,
+      "sup": 81.96,
+      "sazonal": 84.28,
+      "persistencia": 60.72
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 79.18,
+      "inf": 65.82,
+      "sup": 87.2,
+      "sazonal": 86.47,
+      "persistencia": 60.72
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 78.98,
+      "inf": 62.76,
+      "sup": 84.79,
+      "sazonal": 85.92,
+      "persistencia": 60.72
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 75.74,
+      "inf": 57.67,
+      "sup": 80.54,
+      "sazonal": 83.95,
+      "persistencia": 60.72
+     }
+    ]
+   },
+   {
+    "origem": "2024-01",
+    "ear_origem": 61.1,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-02",
+      "real": 64.53,
+      "gb": 63.86,
+      "inf": 59.92,
+      "sup": 66.89,
+      "sazonal": 68.35,
+      "persistencia": 61.1
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 72.98,
+      "inf": 66.54,
+      "sup": 77.37,
+      "sazonal": 74.76,
+      "persistencia": 61.1
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 78.82,
+      "inf": 67.08,
+      "sup": 86.08,
+      "sazonal": 76.76,
+      "persistencia": 61.1
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 79.47,
+      "inf": 66.11,
+      "sup": 87.49,
+      "sazonal": 76.13,
+      "persistencia": 61.1
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 70.46,
+      "inf": 54.24,
+      "sup": 76.27,
+      "sazonal": 74.19,
+      "persistencia": 61.1
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 68.47,
+      "inf": 50.41,
+      "sup": 73.27,
+      "sazonal": 70.26,
+      "persistencia": 61.1
+     }
+    ]
+   },
+   {
+    "origem": "2024-02",
+    "ear_origem": 64.53,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-03",
+      "real": 69.46,
+      "gb": 69.85,
+      "inf": 65.91,
+      "sup": 72.88,
+      "sazonal": 70.94,
+      "persistencia": 64.53
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 70.41,
+      "inf": 63.97,
+      "sup": 74.8,
+      "sazonal": 72.94,
+      "persistencia": 64.53
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 70.32,
+      "inf": 58.57,
+      "sup": 77.57,
+      "sazonal": 72.31,
+      "persistencia": 64.53
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 72.16,
+      "inf": 58.79,
+      "sup": 80.17,
+      "sazonal": 70.37,
+      "persistencia": 64.53
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 68.75,
+      "inf": 52.53,
+      "sup": 74.56,
+      "sazonal": 66.44,
+      "persistencia": 64.53
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 63.31,
+      "inf": 45.25,
+      "sup": 68.11,
+      "sazonal": 60.23,
+      "persistencia": 64.53
+     }
+    ]
+   },
+   {
+    "origem": "2024-03",
+    "ear_origem": 69.46,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-04",
+      "real": 72.91,
+      "gb": 72.5,
+      "inf": 68.55,
+      "sup": 75.53,
+      "sazonal": 71.46,
+      "persistencia": 69.46
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 70.83,
+      "inf": 64.4,
+      "sup": 75.23,
+      "sazonal": 70.82,
+      "persistencia": 69.46
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 70.08,
+      "inf": 58.33,
+      "sup": 77.33,
+      "sazonal": 68.89,
+      "persistencia": 69.46
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 64.65,
+      "inf": 51.28,
+      "sup": 72.66,
+      "sazonal": 64.95,
+      "persistencia": 69.46
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 59.85,
+      "inf": 43.62,
+      "sup": 65.65,
+      "sazonal": 58.74,
+      "persistencia": 69.46
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 49.61,
+      "inf": 31.54,
+      "sup": 54.41,
+      "sazonal": 52.07,
+      "persistencia": 69.46
+     }
+    ]
+   },
+   {
+    "origem": "2024-04",
+    "ear_origem": 72.91,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-05",
+      "real": 71.35,
+      "gb": 71.95,
+      "inf": 68.0,
+      "sup": 74.98,
+      "sazonal": 72.28,
+      "persistencia": 72.91
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 68.46,
+      "inf": 62.02,
+      "sup": 72.85,
+      "sazonal": 70.35,
+      "persistencia": 72.91
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 64.43,
+      "inf": 52.69,
+      "sup": 71.69,
+      "sazonal": 66.41,
+      "persistencia": 72.91
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 60.34,
+      "inf": 46.98,
+      "sup": 68.36,
+      "sazonal": 60.2,
+      "persistencia": 72.91
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 51.8,
+      "inf": 35.57,
+      "sup": 57.6,
+      "sazonal": 53.53,
+      "persistencia": 72.91
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 44.26,
+      "inf": 26.2,
+      "sup": 49.06,
+      "sazonal": 48.31,
+      "persistencia": 72.91
+     }
+    ]
+   },
+   {
+    "origem": "2024-05",
+    "ear_origem": 71.35,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-06",
+      "real": 67.59,
+      "gb": 69.68,
+      "inf": 65.74,
+      "sup": 72.71,
+      "sazonal": 69.42,
+      "persistencia": 71.35
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 64.73,
+      "inf": 58.29,
+      "sup": 69.12,
+      "sazonal": 65.48,
+      "persistencia": 71.35
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 57.4,
+      "inf": 45.65,
+      "sup": 64.65,
+      "sazonal": 59.27,
+      "persistencia": 71.35
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 53.38,
+      "inf": 40.01,
+      "sup": 61.39,
+      "sazonal": 52.6,
+      "persistencia": 71.35
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 46.11,
+      "inf": 29.88,
+      "sup": 51.91,
+      "sazonal": 47.38,
+      "persistencia": 71.35
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 41.99,
+      "inf": 23.92,
+      "sup": 46.79,
+      "sazonal": 45.22,
+      "persistencia": 71.35
+     }
+    ]
+   },
+   {
+    "origem": "2024-06",
+    "ear_origem": 67.59,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-07",
+      "real": 62.55,
+      "gb": 62.81,
+      "inf": 58.86,
+      "sup": 65.84,
+      "sazonal": 63.65,
+      "persistencia": 67.59
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 55.49,
+      "inf": 49.06,
+      "sup": 59.89,
+      "sazonal": 57.44,
+      "persistencia": 67.59
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 49.86,
+      "inf": 38.11,
+      "sup": 57.11,
+      "sazonal": 50.77,
+      "persistencia": 67.59
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 46.74,
+      "inf": 33.38,
+      "sup": 54.76,
+      "sazonal": 45.55,
+      "persistencia": 67.59
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 41.96,
+      "inf": 25.73,
+      "sup": 47.76,
+      "sazonal": 43.39,
+      "persistencia": 67.59
+     },
+     {
+      "horizonte": 6,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 42.98,
+      "inf": 24.91,
+      "sup": 47.78,
+      "sazonal": 46.76,
+      "persistencia": 67.59
+     }
+    ]
+   },
+   {
+    "origem": "2024-07",
+    "ear_origem": 62.55,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-08",
+      "real": 55.74,
+      "gb": 57.17,
+      "inf": 53.23,
+      "sup": 60.21,
+      "sazonal": 56.34,
+      "persistencia": 62.55
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 50.5,
+      "inf": 44.07,
+      "sup": 54.9,
+      "sazonal": 49.66,
+      "persistencia": 62.55
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 44.99,
+      "inf": 33.24,
+      "sup": 52.24,
+      "sazonal": 44.45,
+      "persistencia": 62.55
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 43.32,
+      "inf": 29.96,
+      "sup": 51.34,
+      "sazonal": 42.28,
+      "persistencia": 62.55
+     },
+     {
+      "horizonte": 5,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 43.42,
+      "inf": 27.2,
+      "sup": 49.23,
+      "sazonal": 45.65,
+      "persistencia": 62.55
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 54.6,
+      "inf": 36.54,
+      "sup": 59.4,
+      "sazonal": 54.67,
+      "persistencia": 62.55
+     }
+    ]
+   },
+   {
+    "origem": "2024-08",
+    "ear_origem": 55.74,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-09",
+      "real": 46.52,
+      "gb": 48.78,
+      "inf": 44.84,
+      "sup": 51.82,
+      "sazonal": 49.07,
+      "persistencia": 55.74
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 41.39,
+      "inf": 34.96,
+      "sup": 45.79,
+      "sazonal": 43.85,
+      "persistencia": 55.74
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 39.85,
+      "inf": 28.1,
+      "sup": 47.11,
+      "sazonal": 41.69,
+      "persistencia": 55.74
+     },
+     {
+      "horizonte": 4,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 44.22,
+      "inf": 30.86,
+      "sup": 52.24,
+      "sazonal": 45.06,
+      "persistencia": 55.74
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 53.09,
+      "inf": 36.86,
+      "sup": 58.89,
+      "sazonal": 54.07,
+      "persistencia": 55.74
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 59.94,
+      "inf": 41.88,
+      "sup": 64.74,
+      "sazonal": 61.39,
+      "persistencia": 55.74
+     }
+    ]
+   },
+   {
+    "origem": "2024-09",
+    "ear_origem": 46.52,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-10",
+      "real": 40.35,
+      "gb": 39.02,
+      "inf": 35.08,
+      "sup": 42.06,
+      "sazonal": 41.3,
+      "persistencia": 46.52
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 36.46,
+      "inf": 30.02,
+      "sup": 40.85,
+      "sazonal": 39.14,
+      "persistencia": 46.52
+     },
+     {
+      "horizonte": 3,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 38.9,
+      "inf": 27.15,
+      "sup": 46.15,
+      "sazonal": 42.51,
+      "persistencia": 46.52
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 49.17,
+      "inf": 35.81,
+      "sup": 57.19,
+      "sazonal": 51.53,
+      "persistencia": 46.52
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 57.35,
+      "inf": 41.13,
+      "sup": 63.16,
+      "sazonal": 58.84,
+      "persistencia": 46.52
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 64.0,
+      "inf": 45.93,
+      "sup": 68.79,
+      "sazonal": 65.42,
+      "persistencia": 46.52
+     }
+    ]
+   },
+   {
+    "origem": "2024-10",
+    "ear_origem": 40.35,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-11",
+      "real": 42.65,
+      "gb": 38.38,
+      "inf": 34.43,
+      "sup": 41.41,
+      "sazonal": 38.19,
+      "persistencia": 40.35
+     },
+     {
+      "horizonte": 2,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 41.5,
+      "inf": 35.06,
+      "sup": 45.89,
+      "sazonal": 41.56,
+      "persistencia": 40.35
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 52.5,
+      "inf": 40.76,
+      "sup": 59.76,
+      "sazonal": 50.58,
+      "persistencia": 40.35
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 63.19,
+      "inf": 49.82,
+      "sup": 71.2,
+      "sazonal": 57.89,
+      "persistencia": 40.35
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 72.8,
+      "inf": 56.58,
+      "sup": 78.61,
+      "sazonal": 64.47,
+      "persistencia": 40.35
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 71.01,
+      "inf": 52.95,
+      "sup": 75.81,
+      "sazonal": 66.72,
+      "persistencia": 40.35
+     }
+    ]
+   },
+   {
+    "origem": "2024-11",
+    "ear_origem": 42.65,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2024-12",
+      "real": 50.97,
+      "gb": 52.37,
+      "inf": 48.43,
+      "sup": 55.41,
+      "sazonal": 46.02,
+      "persistencia": 42.65
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 59.22,
+      "inf": 52.78,
+      "sup": 63.61,
+      "sazonal": 55.04,
+      "persistencia": 42.65
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 68.71,
+      "inf": 56.97,
+      "sup": 75.97,
+      "sazonal": 62.35,
+      "persistencia": 42.65
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 75.89,
+      "inf": 62.53,
+      "sup": 83.9,
+      "sazonal": 68.94,
+      "persistencia": 42.65
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 75.71,
+      "inf": 59.48,
+      "sup": 81.51,
+      "sazonal": 71.19,
+      "persistencia": 42.65
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 72.26,
+      "inf": 54.19,
+      "sup": 77.06,
+      "sazonal": 70.59,
+      "persistencia": 42.65
+     }
+    ]
+   },
+   {
+    "origem": "2024-12",
+    "ear_origem": 50.97,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-01",
+      "real": 62.03,
+      "gb": 63.3,
+      "inf": 59.35,
+      "sup": 66.33,
+      "sazonal": 59.98,
+      "persistencia": 50.97
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 72.14,
+      "inf": 65.71,
+      "sup": 76.54,
+      "sazonal": 67.3,
+      "persistencia": 50.97
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 82.39,
+      "inf": 70.64,
+      "sup": 89.64,
+      "sazonal": 73.88,
+      "persistencia": 50.97
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 83.89,
+      "inf": 70.52,
+      "sup": 91.9,
+      "sazonal": 76.13,
+      "persistencia": 50.97
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 83.22,
+      "inf": 67.0,
+      "sup": 89.03,
+      "sazonal": 75.54,
+      "persistencia": 50.97
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 77.04,
+      "inf": 58.98,
+      "sup": 81.84,
+      "sazonal": 73.49,
+      "persistencia": 50.97
+     }
+    ]
+   },
+   {
+    "origem": "2025-01",
+    "ear_origem": 62.03,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-02",
+      "real": 68.75,
+      "gb": 70.27,
+      "inf": 66.33,
+      "sup": 73.31,
+      "sazonal": 69.12,
+      "persistencia": 62.03
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 77.67,
+      "inf": 71.24,
+      "sup": 82.06,
+      "sazonal": 75.48,
+      "persistencia": 62.03
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 83.99,
+      "inf": 72.24,
+      "sup": 91.24,
+      "sazonal": 77.53,
+      "persistencia": 62.03
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 78.58,
+      "inf": 65.22,
+      "sup": 86.6,
+      "sazonal": 76.86,
+      "persistencia": 62.03
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 73.39,
+      "inf": 57.16,
+      "sup": 79.19,
+      "sazonal": 74.85,
+      "persistencia": 62.03
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 70.69,
+      "inf": 52.62,
+      "sup": 75.48,
+      "sazonal": 70.87,
+      "persistencia": 62.03
+     }
+    ]
+   },
+   {
+    "origem": "2025-02",
+    "ear_origem": 68.75,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-03",
+      "real": 68.45,
+      "gb": 75.37,
+      "inf": 71.42,
+      "sup": 78.4,
+      "sazonal": 75.1,
+      "persistencia": 68.75
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 77.06,
+      "inf": 70.63,
+      "sup": 81.45,
+      "sazonal": 77.16,
+      "persistencia": 68.75
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 74.5,
+      "inf": 62.76,
+      "sup": 81.76,
+      "sazonal": 76.49,
+      "persistencia": 68.75
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 72.17,
+      "inf": 58.81,
+      "sup": 80.19,
+      "sazonal": 74.48,
+      "persistencia": 68.75
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 67.26,
+      "inf": 51.04,
+      "sup": 73.07,
+      "sazonal": 70.5,
+      "persistencia": 68.75
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 63.16,
+      "inf": 45.1,
+      "sup": 67.96,
+      "sazonal": 64.26,
+      "persistencia": 68.75
+     }
+    ]
+   },
+   {
+    "origem": "2025-03",
+    "ear_origem": 68.45,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-04",
+      "real": 70.15,
+      "gb": 66.49,
+      "inf": 62.55,
+      "sup": 69.52,
+      "sazonal": 70.5,
+      "persistencia": 68.45
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 66.5,
+      "inf": 60.07,
+      "sup": 70.89,
+      "sazonal": 69.83,
+      "persistencia": 68.45
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 66.05,
+      "inf": 54.3,
+      "sup": 73.3,
+      "sazonal": 67.82,
+      "persistencia": 68.45
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 58.29,
+      "inf": 44.93,
+      "sup": 66.31,
+      "sazonal": 63.84,
+      "persistencia": 68.45
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 50.74,
+      "inf": 34.52,
+      "sup": 56.55,
+      "sazonal": 57.61,
+      "persistencia": 68.45
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 47.99,
+      "inf": 29.93,
+      "sup": 52.79,
+      "sazonal": 50.83,
+      "persistencia": 68.45
+     }
+    ]
+   },
+   {
+    "origem": "2025-04",
+    "ear_origem": 70.15,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-05",
+      "real": 68.42,
+      "gb": 69.33,
+      "inf": 65.39,
+      "sup": 72.37,
+      "sazonal": 69.48,
+      "persistencia": 70.15
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 66.98,
+      "inf": 60.55,
+      "sup": 71.38,
+      "sazonal": 67.47,
+      "persistencia": 70.15
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 62.6,
+      "inf": 50.86,
+      "sup": 69.86,
+      "sazonal": 63.49,
+      "persistencia": 70.15
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 53.79,
+      "inf": 40.42,
+      "sup": 61.8,
+      "sazonal": 57.26,
+      "persistencia": 70.15
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 48.43,
+      "inf": 32.21,
+      "sup": 54.23,
+      "sazonal": 50.48,
+      "persistencia": 70.15
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 45.49,
+      "inf": 27.42,
+      "sup": 50.29,
+      "sazonal": 45.22,
+      "persistencia": 70.15
+     }
+    ]
+   },
+   {
+    "origem": "2025-05",
+    "ear_origem": 68.42,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-06",
+      "real": 66.47,
+      "gb": 65.98,
+      "inf": 62.04,
+      "sup": 69.02,
+      "sazonal": 66.41,
+      "persistencia": 68.42
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 61.48,
+      "inf": 55.05,
+      "sup": 65.87,
+      "sazonal": 62.43,
+      "persistencia": 68.42
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 54.93,
+      "inf": 43.18,
+      "sup": 62.18,
+      "sazonal": 56.19,
+      "persistencia": 68.42
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 49.77,
+      "inf": 36.41,
+      "sup": 57.78,
+      "sazonal": 49.41,
+      "persistencia": 68.42
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 43.46,
+      "inf": 27.24,
+      "sup": 49.27,
+      "sazonal": 44.15,
+      "persistencia": 68.42
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 44.21,
+      "inf": 26.14,
+      "sup": 49.0,
+      "sazonal": 42.18,
+      "persistencia": 68.42
+     }
+    ]
+   },
+   {
+    "origem": "2025-06",
+    "ear_origem": 66.47,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-07",
+      "real": 63.05,
+      "gb": 62.73,
+      "inf": 58.79,
+      "sup": 65.76,
+      "sazonal": 62.5,
+      "persistencia": 66.47
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 56.67,
+      "inf": 50.23,
+      "sup": 61.06,
+      "sazonal": 56.26,
+      "persistencia": 66.47
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 51.5,
+      "inf": 39.75,
+      "sup": 58.75,
+      "sazonal": 49.48,
+      "persistencia": 66.47
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 48.94,
+      "inf": 35.58,
+      "sup": 56.96,
+      "sazonal": 44.22,
+      "persistencia": 66.47
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 44.28,
+      "inf": 28.05,
+      "sup": 50.08,
+      "sazonal": 42.24,
+      "persistencia": 66.47
+     },
+     {
+      "horizonte": 6,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 46.74,
+      "inf": 28.67,
+      "sup": 51.53,
+      "sazonal": 45.82,
+      "persistencia": 66.47
+     }
+    ]
+   },
+   {
+    "origem": "2025-07",
+    "ear_origem": 63.05,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-08",
+      "real": 57.72,
+      "gb": 58.1,
+      "inf": 54.16,
+      "sup": 61.14,
+      "sazonal": 56.82,
+      "persistencia": 63.05
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 51.22,
+      "inf": 44.78,
+      "sup": 55.61,
+      "sazonal": 50.04,
+      "persistencia": 63.05
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 46.84,
+      "inf": 35.09,
+      "sup": 54.1,
+      "sazonal": 44.78,
+      "persistencia": 63.05
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 43.73,
+      "inf": 30.36,
+      "sup": 51.74,
+      "sazonal": 42.8,
+      "persistencia": 63.05
+     },
+     {
+      "horizonte": 5,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 46.54,
+      "inf": 30.32,
+      "sup": 52.35,
+      "sazonal": 46.38,
+      "persistencia": 63.05
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 52.92,
+      "inf": 34.85,
+      "sup": 57.71,
+      "sazonal": 55.48,
+      "persistencia": 63.05
+     }
+    ]
+   },
+   {
+    "origem": "2025-08",
+    "ear_origem": 57.72,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-09",
+      "real": 50.27,
+      "gb": 51.63,
+      "inf": 47.69,
+      "sup": 54.67,
+      "sazonal": 50.94,
+      "persistencia": 57.72
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 45.05,
+      "inf": 38.62,
+      "sup": 49.45,
+      "sazonal": 45.68,
+      "persistencia": 57.72
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 43.23,
+      "inf": 31.48,
+      "sup": 50.48,
+      "sazonal": 43.7,
+      "persistencia": 57.72
+     },
+     {
+      "horizonte": 4,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 44.53,
+      "inf": 31.17,
+      "sup": 52.55,
+      "sazonal": 47.28,
+      "persistencia": 57.72
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 56.16,
+      "inf": 39.94,
+      "sup": 61.97,
+      "sazonal": 56.38,
+      "persistencia": 57.72
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 57.43,
+      "inf": 39.37,
+      "sup": 62.23,
+      "sazonal": 63.67,
+      "persistencia": 57.72
+     }
+    ]
+   },
+   {
+    "origem": "2025-09",
+    "ear_origem": 50.27,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-10",
+      "real": 44.31,
+      "gb": 43.41,
+      "inf": 39.46,
+      "sup": 46.44,
+      "sazonal": 45.02,
+      "persistencia": 50.27
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 41.42,
+      "inf": 34.98,
+      "sup": 45.81,
+      "sazonal": 43.04,
+      "persistencia": 50.27
+     },
+     {
+      "horizonte": 3,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 43.51,
+      "inf": 31.76,
+      "sup": 50.76,
+      "sazonal": 46.61,
+      "persistencia": 50.27
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 48.99,
+      "inf": 35.62,
+      "sup": 57.0,
+      "sazonal": 55.72,
+      "persistencia": 50.27
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 60.74,
+      "inf": 44.52,
+      "sup": 66.55,
+      "sazonal": 63.0,
+      "persistencia": 50.27
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 67.43,
+      "inf": 49.36,
+      "sup": 72.22,
+      "sazonal": 69.3,
+      "persistencia": 50.27
+     }
+    ]
+   },
+   {
+    "origem": "2025-10",
+    "ear_origem": 44.31,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-11",
+      "real": 41.6,
+      "gb": 41.24,
+      "inf": 37.3,
+      "sup": 44.28,
+      "sazonal": 42.34,
+      "persistencia": 44.31
+     },
+     {
+      "horizonte": 2,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 42.42,
+      "inf": 35.99,
+      "sup": 46.82,
+      "sazonal": 45.91,
+      "persistencia": 44.31
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 50.46,
+      "inf": 38.71,
+      "sup": 57.71,
+      "sazonal": 55.01,
+      "persistencia": 44.31
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 59.09,
+      "inf": 45.72,
+      "sup": 67.1,
+      "sazonal": 62.3,
+      "persistencia": 44.31
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 66.23,
+      "inf": 50.01,
+      "sup": 72.04,
+      "sazonal": 68.6,
+      "persistencia": 44.31
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 68.46,
+      "inf": 50.4,
+      "sup": 73.26,
+      "sazonal": 70.83,
+      "persistencia": 44.31
+     }
+    ]
+   },
+   {
+    "origem": "2025-11",
+    "ear_origem": 41.6,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2025-12",
+      "real": 42.13,
+      "gb": 45.5,
+      "inf": 41.56,
+      "sup": 48.54,
+      "sazonal": 45.18,
+      "persistencia": 41.6
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 53.76,
+      "inf": 47.32,
+      "sup": 58.15,
+      "sazonal": 54.28,
+      "persistencia": 41.6
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 58.65,
+      "inf": 46.9,
+      "sup": 65.91,
+      "sazonal": 61.57,
+      "persistencia": 41.6
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 70.88,
+      "inf": 57.52,
+      "sup": 78.9,
+      "sazonal": 67.87,
+      "persistencia": 41.6
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 70.69,
+      "inf": 54.47,
+      "sup": 76.5,
+      "sazonal": 70.09,
+      "persistencia": 41.6
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 64.69,
+      "inf": 46.62,
+      "sup": 69.48,
+      "sazonal": 69.45,
+      "persistencia": 41.6
+     }
+    ]
+   },
+   {
+    "origem": "2025-12",
+    "ear_origem": 42.13,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-01",
+      "real": 47.5,
+      "gb": 47.4,
+      "inf": 43.45,
+      "sup": 50.43,
+      "sazonal": 51.23,
+      "persistencia": 42.13
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 55.15,
+      "inf": 48.72,
+      "sup": 59.55,
+      "sazonal": 58.52,
+      "persistencia": 42.13
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 61.82,
+      "inf": 50.08,
+      "sup": 69.08,
+      "sazonal": 64.82,
+      "persistencia": 42.13
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 68.42,
+      "inf": 55.06,
+      "sup": 76.44,
+      "sazonal": 67.05,
+      "persistencia": 42.13
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 69.51,
+      "inf": 53.29,
+      "sup": 75.32,
+      "sazonal": 66.4,
+      "persistencia": 42.13
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 63.33,
+      "inf": 45.27,
+      "sup": 68.13,
+      "sazonal": 64.36,
+      "persistencia": 42.13
+     }
+    ]
+   },
+   {
+    "origem": "2026-01",
+    "ear_origem": 47.5,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-02",
+      "real": 57.4,
+      "gb": 57.11,
+      "inf": 53.17,
+      "sup": 60.14,
+      "sazonal": 54.58,
+      "persistencia": 47.5
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 61.45,
+      "inf": 55.01,
+      "sup": 65.84,
+      "sazonal": 60.66,
+      "persistencia": 47.5
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 62.99,
+      "inf": 51.25,
+      "sup": 70.25,
+      "sazonal": 62.71,
+      "persistencia": 47.5
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 66.72,
+      "inf": 53.36,
+      "sup": 74.74,
+      "sazonal": 61.99,
+      "persistencia": 47.5
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 65.14,
+      "inf": 48.91,
+      "sup": 70.94,
+      "sazonal": 59.98,
+      "persistencia": 47.5
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 59.27,
+      "inf": 41.2,
+      "sup": 64.07,
+      "sazonal": 56.03,
+      "persistencia": 47.5
+     }
+    ]
+   },
+   {
+    "origem": "2026-02",
+    "ear_origem": 57.4,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-03",
+      "real": 65.38,
+      "gb": 67.13,
+      "inf": 63.18,
+      "sup": 70.16,
+      "sazonal": 63.49,
+      "persistencia": 57.4
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 69.63,
+      "inf": 63.19,
+      "sup": 74.02,
+      "sazonal": 65.54,
+      "persistencia": 57.4
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 69.41,
+      "inf": 57.66,
+      "sup": 76.67,
+      "sazonal": 64.82,
+      "persistencia": 57.4
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 70.51,
+      "inf": 57.14,
+      "sup": 78.52,
+      "sazonal": 62.81,
+      "persistencia": 57.4
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 67.26,
+      "inf": 51.04,
+      "sup": 73.06,
+      "sazonal": 58.86,
+      "persistencia": 57.4
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 60.01,
+      "inf": 41.94,
+      "sup": 64.8,
+      "sazonal": 52.66,
+      "persistencia": 57.4
+     }
+    ]
+   },
+   {
+    "origem": "2026-03",
+    "ear_origem": 65.38,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-04",
+      "real": 66.21,
+      "gb": 68.29,
+      "inf": 64.35,
+      "sup": 71.33,
+      "sazonal": 67.42,
+      "persistencia": 65.38
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 71.54,
+      "inf": 65.11,
+      "sup": 75.94,
+      "sazonal": 66.71,
+      "persistencia": 65.38
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 66.39,
+      "inf": 54.64,
+      "sup": 73.64,
+      "sazonal": 64.7,
+      "persistencia": 65.38
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 65.48,
+      "inf": 52.12,
+      "sup": 73.5,
+      "sazonal": 60.74,
+      "persistencia": 65.38
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 58.17,
+      "inf": 41.95,
+      "sup": 63.97,
+      "sazonal": 54.54,
+      "persistencia": 65.38
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 51.62,
+      "inf": 33.55,
+      "sup": 56.41,
+      "sazonal": 47.73,
+      "persistencia": 65.38
+     }
+    ]
+   },
+   {
+    "origem": "2026-04",
+    "ear_origem": 66.21,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-05",
+      "real": 66.19,
+      "gb": 65.3,
+      "inf": 61.36,
+      "sup": 68.34,
+      "sazonal": 65.5,
+      "persistencia": 66.21
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 62.76,
+      "inf": 56.33,
+      "sup": 67.16,
+      "sazonal": 63.49,
+      "persistencia": 66.21
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 56.99,
+      "inf": 45.25,
+      "sup": 64.25,
+      "sazonal": 59.53,
+      "persistencia": 66.21
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 49.42,
+      "inf": 36.06,
+      "sup": 57.44,
+      "sazonal": 53.34,
+      "persistencia": 66.21
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 45.32,
+      "inf": 29.09,
+      "sup": 51.12,
+      "sazonal": 46.53,
+      "persistencia": 66.21
+     },
+     {
+      "horizonte": 6,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 43.44,
+      "inf": 25.38,
+      "sup": 48.24,
+      "sazonal": 41.24,
+      "persistencia": 66.21
+     }
+    ]
+   },
+   {
+    "origem": "2026-05",
+    "ear_origem": 66.19,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-06",
+      "real": 65.55,
+      "gb": 64.55,
+      "inf": 60.6,
+      "sup": 67.58,
+      "sazonal": 64.18,
+      "persistencia": 66.19
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 60.06,
+      "inf": 53.62,
+      "sup": 64.45,
+      "sazonal": 60.22,
+      "persistencia": 66.19
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 53.69,
+      "inf": 41.95,
+      "sup": 60.95,
+      "sazonal": 54.02,
+      "persistencia": 66.19
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 48.64,
+      "inf": 35.28,
+      "sup": 56.66,
+      "sazonal": 47.21,
+      "persistencia": 66.19
+     },
+     {
+      "horizonte": 5,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 45.38,
+      "inf": 29.16,
+      "sup": 51.19,
+      "sazonal": 41.93,
+      "persistencia": 66.19
+     }
+    ]
+   },
+   {
+    "origem": "2026-06",
+    "ear_origem": 65.55,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-07",
+      "real": 62.96,
+      "gb": 62.19,
+      "inf": 58.25,
+      "sup": 65.23,
+      "sazonal": 61.6,
+      "persistencia": 65.55
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 55.91,
+      "inf": 49.47,
+      "sup": 60.3,
+      "sazonal": 55.4,
+      "persistencia": 65.55
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 50.33,
+      "inf": 38.58,
+      "sup": 57.58,
+      "sazonal": 48.59,
+      "persistencia": 65.55
+     },
+     {
+      "horizonte": 4,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 46.31,
+      "inf": 32.95,
+      "sup": 54.33,
+      "sazonal": 43.3,
+      "persistencia": 65.55
+     }
+    ]
+   },
+   {
+    "origem": "2026-07",
+    "ear_origem": 62.96,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-08",
+      "real": 57.98,
+      "gb": 58.17,
+      "inf": 54.23,
+      "sup": 61.21,
+      "sazonal": 56.76,
+      "persistencia": 62.96
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 51.82,
+      "inf": 45.38,
+      "sup": 56.21,
+      "sazonal": 49.95,
+      "persistencia": 62.96
+     },
+     {
+      "horizonte": 3,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 46.05,
+      "inf": 34.3,
+      "sup": 53.3,
+      "sazonal": 44.66,
+      "persistencia": 62.96
+     }
+    ]
+   },
+   {
+    "origem": "2026-08",
+    "ear_origem": 57.98,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-09",
+      "real": 56.43,
+      "gb": 52.1,
+      "inf": 48.16,
+      "sup": 55.13,
+      "sazonal": 51.17,
+      "persistencia": 57.98
+     },
+     {
+      "horizonte": 2,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 45.23,
+      "inf": 38.8,
+      "sup": 49.63,
+      "sazonal": 45.88,
+      "persistencia": 57.98
+     }
+    ]
+   },
+   {
+    "origem": "2026-09",
+    "ear_origem": 56.43,
+    "previsoes": [
+     {
+      "horizonte": 1,
+      "mes": "2026-10",
+      "real": 54.92,
+      "gb": 53.95,
+      "inf": 50.0,
+      "sup": 56.98,
+      "sazonal": 51.14,
+      "persistencia": 56.43
+     }
+    ]
+   }
+  ]
+ }
 }
