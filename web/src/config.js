@@ -3,7 +3,7 @@ export const REPO_URL = "https://github.com/cristianomack/projeto-aplicado-iv";
 export const NOTEBOOK_URL = `${REPO_URL}/blob/main/notebooks/cd_projeto_aplicado_IV_doc.ipynb`;
 
 // Preencha quando o vídeo estiver publicado (ex.: link do YouTube). Vazio = o link não aparece.
-export const VIDEO_URL = "";
+export const VIDEO_URL = "https://youtu.be/tkWHFWJ3vJY";
 
 export const EQUIPE = ["Cristiano Prado do Carmo", "Bruna Mendes Rocha"];
 export const CURSO = "Projeto Aplicado IV, Ciência de Dados, Universidade Presbiteriana Mackenzie";

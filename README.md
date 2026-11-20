@@ -5,6 +5,8 @@ Projeto desenvolvido para a disciplina **Projeto Aplicado IV**, Ciência de Dado
 **Painel público:** https://cristianomack.github.io/projeto-aplicado-iv/
 (página técnica em `#/tecnico` e metodologia em `#/sobre`)
 
+**Vídeo de apresentação:** https://youtu.be/tkWHFWJ3vJY
+
 ## Equipe
 
 - Cristiano Prado do Carmo, 10720249
